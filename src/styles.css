@@ -2,4 +2,14 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-@use "primeicons/primeicons.css";
+
+
+html {
+    scroll-behavior: smooth;
+}
+
+@layer base {
+    h1, h2, h3, h4, p, small, div {
+        @apply text-my-black;
+    }
+}

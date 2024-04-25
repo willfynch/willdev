@@ -3,11 +3,11 @@ import { CarouselModule } from 'primeng/carousel';
 import { Card, CardModule } from 'primeng/card';
 import { Experience } from '../../models/experience.model';
 import { ScrollerModule } from 'primeng/scroller';
-
+import { TagModule } from 'primeng/tag';
 @Component({
   selector: 'app-resume-experience',
   standalone: true,
-  imports: [CarouselModule, CardModule, ScrollerModule],
+  imports: [CarouselModule, CardModule, ScrollerModule, TagModule],
   templateUrl: './resume-experience.component.html',
   styleUrl: './resume-experience.component.scss'
 })
@@ -38,7 +38,7 @@ export class ResumeExperienceComponent {
       job: "DevOps & Chef de Projet",
       image: "logo_indarra.jpg",
       duration: "6 mois",
-      description: "Site Web éditorial d’un fonds de dotation territorial",
+      description: "Site Web éditorial d’un fonds de dotation",
       tasks: [
         "Agile SCRUM",
         "Réalisation d’un webhook pour relier AWS CodePipeline et Strapi",

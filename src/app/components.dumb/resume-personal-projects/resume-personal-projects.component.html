@@ -1,0 +1,25 @@
+<section>
+    <p-card header="Formations">
+        <p-carousel [value]="projects" [numVisible]="2" [numScroll]="1" [responsiveOptions]="responsiveOptions">
+            <ng-template let-project pTemplate="item">
+                <p-card class="rounded-md" header="{{project.title}}" subheader="{{project.description}}" [style]="{margin: '5px 5px 5px 5px' }">
+                    <ng-template pTemplate="header">
+                        <img class="rounded-t-md" alt="Card" src="../../../assets/images/{{project.image}}" />
+                    </ng-template>
+                    <div class="flex flex-wrap gap-2 py-2">
+                        @for(techno of project.technos; track techno){
+                            <p-tag [style]="{ 'background': '#D4C09E', 'color':'#221505'}" value="{{techno}}"></p-tag>
+                        }
+                    </div>
+                    <ng-template pTemplate="footer">
+                        <a href="{{project.url}}" target="_blank" rel="noopener noreferrer"
+                            class="text-my-black p-button rounded-full bg-my-white hover:brightness-75">
+                            <i class="mr-2 pi pi-external-link"></i>Visiter
+                        </a>
+
+                    </ng-template>
+                </p-card>
+            </ng-template>
+        </p-carousel>
+    </p-card>
+</section>
