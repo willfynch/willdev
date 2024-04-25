@@ -2,7 +2,7 @@
     <p-card header="Projets chez le client">
         <p-carousel [value]="experiences" [numVisible]="2" [numScroll]="1" [responsiveOptions]="responsiveOptions">
             <ng-template let-experience pTemplate="item">
-                <div class="border-my-brown border-[1px] shadow-sm m-2">
+                <div class="border-my-brown border-[1px] p-4 shadow-sm m-2">
                     <div class="flex flex-col justify-center items-center">
                         <div class="mb-3 h-[50px] w-[50px]">
                             <img src="../../../assets/images/{{experience.image}}" [alt]="experience.company" />
@@ -10,7 +10,14 @@
                         <div>
                             <h3 class="text-center mb-1 uppercase font-bold">{{ experience.company }}</h3>
                             <h4 class="mb-1 text-center">{{experience.job}} | {{experience.duration}}</h4>
-                            <p class="text-center">{{experience.description}}</p>
+                            <small class="text-center">{{experience.description}}</small>
+                        </div>
+                        <div class="w-full px-4 my-2">
+                            <p-scroller [items]="experience.tasks" [itemSize]="20" scrollHeight="200px" styleClass="border-1 surface-border">
+                                <ng-template pTemplate="item" let-task let-options="options">
+                                    <small [ngClass]="{ 'bg-my-white': options.odd }" class="flex align-items-center p-2">{{ task }}</small>
+                                </ng-template>
+                            </p-scroller>
                         </div>
                     </div>
                 </div>

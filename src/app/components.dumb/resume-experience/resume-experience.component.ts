@@ -2,12 +2,12 @@ import { Component } from '@angular/core';
 import { CarouselModule } from 'primeng/carousel';
 import { Card, CardModule } from 'primeng/card';
 import { Experience } from '../../models/experience.model';
-
+import { ScrollerModule } from 'primeng/scroller';
 
 @Component({
   selector: 'app-resume-experience',
   standalone: true,
-  imports: [CarouselModule, CardModule],
+  imports: [CarouselModule, CardModule, ScrollerModule],
   templateUrl: './resume-experience.component.html',
   styleUrl: './resume-experience.component.scss'
 })
