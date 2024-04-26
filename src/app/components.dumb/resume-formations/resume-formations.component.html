@@ -1,21 +1,31 @@
 <section>
     <p-card header="Formations">
-        <p-tabView>
-            
-            <p-tabPanel header="test">
-                <div>
-                    test
-                </div>
+        <mat-accordion>
+            @for(formation of formations; track formation){
 
-            </p-tabPanel>
-            
-        </p-tabView>
+            <mat-expansion-panel>
+                <mat-expansion-panel-header>
+                    <mat-panel-title>
+                        {{formation.degree}}
+                    </mat-panel-title>
+                </mat-expansion-panel-header>
 
-        <p-fieldset legend="Header" [toggleable]="true">
-            <p>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-                consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-            </p>
-        </p-fieldset>
+                <article class="flex flex-col justify-center items-center">
+                    <img class="w-[150px] h-auto" src="../../../assets/images/{{formation.image}}"
+                        alt="Logo de {{formation.school}}">
+                    <h3>{{formation.school}}</h3>
+                    <p>{{formation.type}} | {{formation.duration}}</p>
+                    <a href="{{formation.website}}" target="_blank" rel="noopener noreferrer"
+                        class="text-my-black p-button rounded-full bg-my-white hover:brightness-75">
+                        <i class="mr-2 pi pi-external-link"></i>Visiter
+                    </a>
+                </article>
+
+            </mat-expansion-panel>
+
+            }
+        </mat-accordion>
+
+
     </p-card>
 </section>

@@ -1,0 +1,19 @@
+/* You can add global styles to this file, and also import other style files */
+
+@import './tailwind.css';
+
+html {
+    scroll-behavior: smooth;
+}
+p-tag {
+    cursor: default;
+}
+p-tag:hover {
+    filter: brightness(50%);
+}
+
+
+
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+@import '@angular/material/prebuilt-themes/deeppurple-amber.css';

@@ -6,4 +6,5 @@ export interface Formation {
     image: string;
     icon?: string;
     color?: string;
+    website:string;
 }
