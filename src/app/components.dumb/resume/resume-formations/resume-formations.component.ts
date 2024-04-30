@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { Formation } from '../../models/formation.model';
+import { Formation } from '../../../models/formation.model';
 import { CardModule } from 'primeng/card';
 import {MatExpansionModule} from '@angular/material/expansion';
 @Component({

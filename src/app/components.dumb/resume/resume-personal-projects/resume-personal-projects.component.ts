@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { CardModule } from 'primeng/card';
-import { PersonalProject } from '../../models/personnal-project.model';
+import { PersonalProject } from '../../../models/personnal-project.model';
 import { CarouselModule } from 'primeng/carousel';
 import { ButtonModule } from 'primeng/button';
 import { TagModule } from 'primeng/tag';

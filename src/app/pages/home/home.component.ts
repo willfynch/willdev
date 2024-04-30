@@ -1,18 +1,11 @@
 import { Component } from '@angular/core';
-import { ResumeHeaderComponent } from '../../components.dumb/resume-header/resume-header.component';
-import { ResumeExperienceComponent } from '../../components.dumb/resume-experience/resume-experience.component';
-import { ScrolltopDirective } from '../../directives/scrolltop.directive';
-import { ResumePersonalProjectsComponent } from '../../components.dumb/resume-personal-projects/resume-personal-projects.component';
-import { ResumeFormationsComponent } from '../../components.dumb/resume-formations/resume-formations.component';
+import { HeroComponent } from '../../components.dumb/landing/hero/hero.component';
+
 @Component({
   selector: 'app-home',
   standalone: true,
   imports: [ 
-    ResumeHeaderComponent, 
-    ResumeExperienceComponent, 
-    ScrolltopDirective, 
-    ResumePersonalProjectsComponent,
-    ResumeFormationsComponent
+    HeroComponent
   ],
   templateUrl: './home.component.html',
   styleUrl: './home.component.scss'

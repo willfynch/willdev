@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 import { CarouselModule } from 'primeng/carousel';
 import { Card, CardModule } from 'primeng/card';
-import { Experience } from '../../models/experience.model';
+import { Experience } from '../../../models/experience.model';
 import { ScrollerModule } from 'primeng/scroller';
 import { TagModule } from 'primeng/tag';
 @Component({
