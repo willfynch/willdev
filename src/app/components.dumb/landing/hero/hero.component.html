@@ -1,15 +1,17 @@
-<section class="pt-20 px-4 lg:px-40 bg-my-white  flex flex-col sm:flex-row  justify-between items-center">
-    <div class="max">
-        <h1 class="hero-title">Bonjour, moi c'est William</h1>
-        <p class="hero-paragraph">Je développe des sites web et des applications à l'aide d'Angular et NextJS.</p>
-        
+<section class="pt-20 px-4 lg:px-44 bg-my-white  flex gap-4 flex-col sm:flex-row  justify-between items-center">
+    <div class="flex flex-col items-center sm:items-start">
+        <h1 class="hero-title">{{TITLE}}</h1>
+        <p class="hero-paragraph text-center sm:text-justify w-[300px] sm:w-[400px]">{{SUBTITLE}}</p>
+        <a href="resume">
+            <button>{{CTA}}</button>
+        </a>
     </div>
-    <div class="">
+    <div class="mt-10 sm:m-0">
         <app-hero-image></app-hero-image>
     </div>
 </section>
 <div class="flex justify-end">
-    <svg width="100%" height="100%" id="svg" viewBox="0 0 1440 490" xmlns="http://www.w3.org/2000/svg" >
+    <svg width="100%" height="80%" id="svg" viewBox="0 0 1440 490" xmlns="http://www.w3.org/2000/svg" >
         <defs>
             <linearGradient id="gradient" x1="50%" y1="100%" x2="50%" y2="0%">
                 <stop offset="5%" stop-color="#fdf7ec"></stop>

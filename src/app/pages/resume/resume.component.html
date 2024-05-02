@@ -1,5 +1,10 @@
-<main class="px-4 lg:px-60 py-4 relative">
-    <button role="nav" class="absolute bottom-10 right-10" appScrolltop><i class="text-my-dark-brown hover:text-my-brown text-3xl pi pi-arrow-circle-up"></i></button>
+<main class="px-4 lg:px-60 py-4 relative mt-10">
+   
+    <div class="cursor-pointer w-[50px] h-[50px] z-40 bg-my-white absolute text-my-dark-brown flex justify-center items-center hover:text-my-brown bottom-4 right-4 sbottom-10 sright-10">
+        <mat-icon appScrolltop  aria-hidden="false"
+        aria-label="Remonter en haut" fontIcon="arrow_upward"></mat-icon>
+    </div>
+   
     <app-resume-header></app-resume-header>
     <div class="py-4">
         <app-resume-experience></app-resume-experience>
@@ -10,7 +15,4 @@
     <div class="py-4">
         <app-resume-formations></app-resume-formations>
     </div>
-    <footer>
-
-    </footer>
 </main>

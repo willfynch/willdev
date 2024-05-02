@@ -6,4 +6,15 @@
     h1, h2, h3, h4, p, small, div {
         @apply text-my-black;
     }
+    button {
+        @apply dark:bg-my-text bg-my-dark-brown duration-200 text-my-white dark:text-my-black hover:bg-my-white dark:hover:bg-my-black hover:text-my-black dark:hover:text-my-text px-4 py-2 rounded-full;
+
+    }
+}
+
+@layer components {
+
+    .link {
+        @apply font-semibold hover:text-my-brown
+    }
 }

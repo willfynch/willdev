@@ -4,7 +4,7 @@ import { ResumeExperienceComponent } from '../../components.dumb/resume/resume-e
 import { ScrolltopDirective } from '../../directives/scrolltop.directive';
 import { ResumePersonalProjectsComponent } from '../../components.dumb/resume/resume-personal-projects/resume-personal-projects.component';
 import { ResumeFormationsComponent } from '../../components.dumb/resume/resume-formations/resume-formations.component';
-
+import {MatIconModule} from '@angular/material/icon'; 
 @Component({
   selector: 'app-resume',
   standalone: true,
@@ -13,7 +13,8 @@ import { ResumeFormationsComponent } from '../../components.dumb/resume/resume-f
     ResumeExperienceComponent, 
     ScrolltopDirective, 
     ResumePersonalProjectsComponent,
-    ResumeFormationsComponent
+    ResumeFormationsComponent,
+    MatIconModule
   ],
   templateUrl: './resume.component.html',
   styleUrl: './resume.component.scss'
