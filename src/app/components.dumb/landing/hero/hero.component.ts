@@ -1,8 +1,8 @@
 import { Component } from '@angular/core';
 import { HeroImageComponent } from '../hero.image/hero.image.component';
-
+import { MatIconModule } from '@angular/material/icon';
 export enum TEXT {
-  TITLE = `Bonjour, moi c'est William`,
+  TITLE = `Du code. Du café.`,
   SUBTITLE = `Je développe des sites web et des applications intuitives et ergonomiques à l'aide d'Angular et NextJS.`,
   CTA = `Voir mon CV en ligne`
 }
@@ -10,7 +10,7 @@ export enum TEXT {
 @Component({
   selector: 'app-hero',
   standalone: true,
-  imports: [HeroImageComponent],
+  imports: [HeroImageComponent, MatIconModule],
   templateUrl: './hero.component.html',
   styleUrl: './hero.component.scss'
 })

@@ -2,13 +2,34 @@
     font-weight: 900;
     font-size: 1.5rem;
 }
+.hero-paragraph {
+    font-size: .8rem;
+}
+@media (min-width:400px)  {
+    .hero-title {
+        font-size:2rem;
+    }
 
+}
 @media (min-width:700px)  {
     .hero-title {
         font-size:2.5rem;
+    }
+
+}
+@media (min-width:1200px)  {
+    .hero-title {
+        font-size:3rem;
+    }
+    .hero-paragraph {
+        font-size: 1.2rem;
     }
 }
 
 .hero-paragraph {
     padding: 20px 0;
+}
+.container {
+    
+    clip-path: polygon(0 0, 100% 0, 100% 87%, 0% 100%);
 }

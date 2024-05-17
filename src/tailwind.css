@@ -6,15 +6,37 @@
     h1, h2, h3, h4, p, small, div {
         @apply text-my-black;
     }
-    button {
-        @apply dark:bg-my-text bg-my-dark-brown duration-200 text-my-white dark:text-my-black hover:bg-my-white dark:hover:bg-my-black hover:text-my-black dark:hover:text-my-text px-4 py-2 rounded-full;
-
+    p {
+        line-height: 150%;
     }
+
 }
 
 @layer components {
 
     .link {
-        @apply font-semibold hover:text-my-brown
+        @apply hover:text-my-brown font-semibold;
     }
-}
+    .btn {
+        @apply dark:bg-my-text bg-my-dark-brown duration-200 text-my-white dark:text-my-black hover:bg-my-white dark:hover:bg-my-black hover:text-my-black dark:hover:text-my-text px-4 py-2 rounded-full;
+
+    }
+    .btn-white {
+        @apply bg-my-white z-10 duration-300 relative text-my-black hover:text-my-text px-4 py-2 shadow-md;
+        overflow: hidden;
+    }
+    .btn-white::before {
+        content: '';
+        position: absolute;
+        left: -20px;
+        top:0;
+        z-index: -1;
+        width: 0%;
+        height: 100%;
+        background-color: #221505;
+        transition: all linear .3s;
+    }
+    .btn-white:hover::before {
+        width: 120%;
+    }
+ }

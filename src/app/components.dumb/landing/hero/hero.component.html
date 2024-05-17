@@ -1,24 +1,32 @@
-<section class="pt-20 px-4 lg:px-44 bg-my-white  flex gap-4 flex-col sm:flex-row  justify-between items-center">
-    <div class="flex flex-col items-center sm:items-start">
-        <h1 class="hero-title">{{TITLE}}</h1>
-        <p class="hero-paragraph text-center sm:text-justify w-[300px] sm:w-[400px]">{{SUBTITLE}}</p>
-        <a href="resume">
-            <button>{{CTA}}</button>
-        </a>
-    </div>
-    <div class="mt-10 sm:m-0">
-        <app-hero-image></app-hero-image>
-    </div>
-</section>
-<div class="flex justify-end">
-    <svg width="100%" height="80%" id="svg" viewBox="0 0 1440 490" xmlns="http://www.w3.org/2000/svg" >
-        <defs>
-            <linearGradient id="gradient" x1="50%" y1="100%" x2="50%" y2="0%">
-                <stop offset="5%" stop-color="#fdf7ec"></stop>
-                <stop offset="95%" stop-color="#d4c09e"></stop>
-            </linearGradient>
-        </defs>
-        <path d="M 0,500 L 0,187 C 91.89285714285714,204.39285714285714 183.78571428571428,221.78571428571428 303,243 C 422.2142857142857,264.2142857142857 568.75,289.25 698,258 C 827.25,226.74999999999997 939.2142857142858,139.21428571428572 1060,118 C 1180.7857142857142,96.78571428571429 1310.392857142857,141.89285714285714 1440,187 L 1440,500 L 0,500 Z" stroke="none" stroke-width="0" fill="url(#gradient)" fill-opacity="1" class="transition-all duration-300 ease-in-out delay-150 path-0" transform="rotate(-180 720 250)">
-        </path>
-    </svg>
+<div class="container relative min-w-full min-h-screen">
+    <video class="absolute z-10 w-full h-full object-cover" loop autoplay muted src="/assets/videos/coffee_video.mp4"></video>
+    <section class="absolute h-full w-full z-20 h-screen px-4 sm:px-20 lg:px-44 2xl:px-96 bg-my-black/90 flex gap-4 flex-col justify-center items-center">
+        <div class="w-full flex flex-col items-center sm:items-start">
+            <h1 class="hero-title text-my-white/80 text-center sm:text-justify">{{TITLE}}
+            </h1>
+            <p class="text-my-white/60 hero-paragraph text-center sm:text-justify w-[300px] sm:w-[500px]">{{SUBTITLE}}</p>
+            <a href="resume">
+                <button class="btn-white">{{CTA}}</button>
+            </a>
+        </div>
+        <!-- <div class="see-more scale-[150%] border border-my-text border-2 rounded-full h-10 flex justify-center items-center 2xl:mt-60 pt-2">
+            <i class="material-icons text-my-text animate-bounce">arrow_downward</i>
+        </div> -->
+        <!-- <div class="mt-10 sm:m-0">
+            <app-hero-image></app-hero-image>
+        </div> -->
+    </section>
+    <!-- <div class="flex justify-end absolute z-20 bottom-0">
+        <svg width="100%" height="40%" id="svg" viewBox="0 0 1440 490" xmlns="http://www.w3.org/2000/svg" >
+            <defs>
+                <linearGradient id="gradient" x1="50%" y1="100%" x2="50%" y2="0%">
+                    <stop offset="5%" stop-color="#fdf7ec"></stop>
+                    <stop offset="95%" stop-color="#d4c09e"></stop>
+                </linearGradient>
+            </defs>
+            <path d="M 0,500 L 0,187 C 91.89285714285714,204.39285714285714 183.78571428571428,221.78571428571428 303,243 C 422.2142857142857,264.2142857142857 568.75,289.25 698,258 C 827.25,226.74999999999997 939.2142857142858,139.21428571428572 1060,118 C 1180.7857142857142,96.78571428571429 1310.392857142857,141.89285714285714 1440,187 L 1440,500 L 0,500 Z" stroke="none" stroke-width="0" fill="url(#gradient)" fill-opacity="1" class="transition-all duration-300 ease-in-out delay-150 path-0" transform="rotate(-180 720 250)">
+            </path>
+        </svg>
+    </div> -->
+    
 </div>
