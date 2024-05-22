@@ -1,6 +1,5 @@
 <section>
-    <p-card header="Personal Projects">
-
+    <p-card header="Projets personnels">
         <div  class="grid grid-cols-1 md:grid-cols-2">
             @for(project of projects; track project){
             <p-card class="rounded-md" header="{{project.title}}" subheader="{{project.description}}"
@@ -8,7 +7,7 @@
                 <ng-template pTemplate="header">
                     <img class="rounded-t-md" alt="Card" src="../../../assets/images/{{project.image}}" />
                 </ng-template>
-                <div class="flex flex-wrap gap-2 py-2">
+                <div class="flex flex-wrap gap-2 py-2 h-20">
                     @for(techno of project.technos; track techno){
                     <p-tag [style]="{ 'background': '#D4C09E', 'color':'#221505'}" value="{{techno}}"></p-tag>
                     }

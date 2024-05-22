@@ -1,5 +1,4 @@
 import { Component } from '@angular/core';
-import { HeroImageComponent } from '../hero.image/hero.image.component';
 import { MatIconModule } from '@angular/material/icon';
 export enum TEXT {
   TITLE = `Du code. Du café.`,
@@ -10,7 +9,7 @@ export enum TEXT {
 @Component({
   selector: 'app-hero',
   standalone: true,
-  imports: [HeroImageComponent, MatIconModule],
+  imports:  [MatIconModule],
   templateUrl: './hero.component.html',
   styleUrl: './hero.component.scss'
 })

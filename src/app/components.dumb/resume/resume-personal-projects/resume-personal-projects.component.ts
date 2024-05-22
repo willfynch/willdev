@@ -4,6 +4,7 @@ import { PersonalProject } from '../../../models/personnal-project.model';
 import { CarouselModule } from 'primeng/carousel';
 import { ButtonModule } from 'primeng/button';
 import { TagModule } from 'primeng/tag';
+import { personalProjects } from '../../../../data/personalProjects';
 @Component({
   selector: 'app-resume-personal-projects',
   standalone: true,
@@ -14,33 +15,7 @@ import { TagModule } from 'primeng/tag';
 export class ResumePersonalProjectsComponent {
 
   responsiveOptions: any[] | undefined;
-
-  projects : PersonalProject[] = [
-    {
-      title: "Miora Sophrologie",
-      description: "Site vitrine",
-      tasks: [
-        "Maquettage",
-        "Développement",
-        "Mise en production"
-      ],
-      url: "https://miorasophrologie.fr",
-      technos: ["NextJS", "TailwindCSS", "TypeScript", "Netlify", "Figma"],
-      image: "portfolio_miorasophrologie.webp"
-    },
-    {
-      title: "Du Café et du Code",
-      description: "Site vitrine et éditorial - en cours",
-      tasks: [
-        "Maquettage",
-        "Développement",
-        "Mise en production"
-      ],
-      url: "https://ducafeetducode.com",
-      technos: ["NextJS", "TinaCMS", "TailwindCSS", "TypeScript", "Vercel", "Figma", "Hook Form"],
-      image: "portfolio_ducafeetducode.webp"
-    }
-  ]
+  projects : PersonalProject[] = personalProjects;
 
   ngOnInit(){
     this.responsiveOptions = [
