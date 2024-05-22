@@ -12,7 +12,20 @@ p-tag:hover {
     filter: brightness(50%);
 }
 
-
-
 html, body { height: 100%; }
-body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif;}
+* {
+    color: #160f0b;
+}
+.titleh2 {
+    font-size: 2rem;
+    margin: 0 0 4rem 0;
+}
+.titleh2::before {
+    content: "";
+    position: absolute;
+    background-color: #D4C09E;
+    width: 80px;
+    margin-top: 35px;
+    height: 5px;
+}

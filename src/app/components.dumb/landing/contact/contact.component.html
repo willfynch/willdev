@@ -1,0 +1,39 @@
+<section>
+    <h2 class="titleh2 text-center">Pour me contacter</h2>
+    <div class=" grid grid-cols-1 place-items-center">
+        <form (ngSubmit)="submitContactForm()" class="w-full max-w-[800px] flex flex-col" [formGroup]="contactForm">
+            <mat-form-field >
+                <mat-label>Nom</mat-label>
+                <input  matInput formControlName="name">
+                @if(name?.invalid){
+                    <mat-error>{{ERROR.REQUIRED}}</mat-error>
+                }
+            </mat-form-field>
+    
+            <mat-form-field >
+                <mat-label>Email</mat-label>
+                <input required matInput formControlName="email">
+                @if(email?.hasError('required')){
+                    <mat-error>{{ERROR.REQUIRED}}</mat-error>
+                }
+                @if(email?.hasError('email')){
+                    <mat-error>{{ERROR.EMAIL_ERROR}}</mat-error>
+                }
+            </mat-form-field>
+    
+            <mat-form-field >
+                <mat-label>Corps du message</mat-label>
+                <textarea rows="10" matInput formControlName="body"></textarea>
+                @if(body?.invalid){
+                    <mat-error>{{ERROR.REQUIRED}}</mat-error>
+                }
+            </mat-form-field>
+    
+            <div  class="text-center">
+                <button type="submit" class="w-content btn-black">{{SUBMIT}}</button>
+            </div>
+        </form>
+
+    </div>
+
+</section>

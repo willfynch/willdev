@@ -3,11 +3,23 @@
 @tailwind utilities;
 
 @layer base {
-    h1, h2, h3, h4, p, small, div {
-        @apply text-my-black;
-    }
     p {
         line-height: 150%;
+    }
+    section {
+        @apply bg-my-white -mt-40 py-40 px-4 sm:px-20 lg:px-44 2xl:px-96;
+    }
+    h2 {
+        font-size: 2rem;
+        margin: 0 0 4rem 0;
+    }
+    h2::before {
+        content: "";
+        position: absolute;
+        background-color: #D4C09E;
+        width: 80px;
+        margin-top: 35px;
+        height: 5px;
     }
 }
 
@@ -21,21 +33,11 @@
 
     }
     .btn-white {
-        @apply bg-my-white z-10 duration-300 relative text-my-black hover:text-my-text px-4 py-2 shadow-md;
+        @apply rounded-lg bg-my-white z-10 duration-300 relative text-my-black px-4 py-2 shadow-md;
         overflow: hidden;
     }
-    .btn-white::before {
-        content: '';
-        position: absolute;
-        left: -20px;
-        top:0;
-        z-index: -1;
-        width: 0%;
-        height: 100%;
-        background-color: #221505;
-        transition: all linear .3s;
-    }
-    .btn-white:hover::before {
-        width: 120%;
+    .btn-black {
+        @apply rounded-lg bg-my-black z-10 duration-300 relative text-my-white px-4 py-2 shadow-md;
+        overflow: hidden;
     }
  }
