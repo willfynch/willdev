@@ -5,8 +5,13 @@
 .titleh2::before {
     content: "";
     position: absolute;
-    background-color: #D4C09E;
+    background-color: #160f0b;
     width: 80px;
     margin-top: 35px;
     height: 5px;
 }
+.loading {
+    background-color: #3b3226;
+}
+
+.mat-mdc-progress-spinner { --mdc-circular-progress-active-indicator-color: #fdf7ec; }

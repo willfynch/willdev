@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
 import { Email } from '../models/email.model';
-import emailjs from '@emailjs/browser';
+import emailjs, { EmailJSResponseStatus } from '@emailjs/browser';
 import { environment } from '../../environments/environment';
 import { env } from 'process';
 
@@ -22,8 +22,8 @@ export class EmailjsService {
     });
    }
 
-  sendMail(email: any){
-    emailjs.send(environment.EMAILJS_SERVICE_ID, environment.EMAILJS_TEMPLATE_ID, email)
+  sendMail(email: any): Promise<EmailJSResponseStatus>{
+    return emailjs.send(environment.EMAILJS_SERVICE_ID, environment.EMAILJS_TEMPLATE_ID, email)
   }
 
 

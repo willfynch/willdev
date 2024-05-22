@@ -1,4 +1,4 @@
-export interface PersonalProject {
+export interface Project {
     title: string;
     description: string;
     tasks: string[];

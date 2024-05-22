@@ -13,7 +13,9 @@ module.exports = {
         'my-green' : '#e9ebe3',
         'my-dark-green' : '#535b3d',
         'my-text': '#C3BEB6',
-        'my-dark-brown': '#593117'
+        'my-dark-brown': '#593117',
+        'my-red' : '#fecaca',
+        'my-dark-red' : '#dc2626'
       }
     },
   },

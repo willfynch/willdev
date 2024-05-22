@@ -7,7 +7,7 @@
         line-height: 150%;
     }
     section {
-        @apply bg-my-white -mt-40 py-40 px-4 sm:px-20 lg:px-44 2xl:px-96;
+        @apply bg-my-white py-32 px-4 sm:px-20 lg:px-44 2xl:px-96;
     }
     h2 {
         font-size: 2rem;

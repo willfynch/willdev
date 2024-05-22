@@ -1,17 +1,26 @@
-<div class="container relative min-w-full min-h-screen">
-    <video class="absolute  z-10 w-full h-full object-cover" loop autoplay muted src="/assets/videos/coffee_video.mp4"></video>
-    <div class="absolute h-full w-full z-20 h-screen px-4 sm:px-20 lg:px-44 2xl:px-96 bg-my-black/90 flex gap-4 flex-col justify-center items-center">
-        <div class="w-full flex flex-col items-center sm:items-start">
-            <h1 class="hero-title text-my-white/80 text-center sm:text-justify">{{TITLE}}
-            </h1>
-            <p class="text-my-white/60 hero-paragraph text-center sm:text-justify w-[300px] sm:w-[500px]">{{SUBTITLE}}</p>
-            <a href="resume">
-                <button class="btn-white">{{CTA}}</button>
-            </a>
+<div class="container flex flex-col justify-between relative min-w-full min-h-screen">
+    <div>
+        <video class="absolute  z-10 w-full h-full object-cover" loop autoplay muted
+            src="/assets/videos/coffee_video.mp4"></video>
+        <div
+            class="absolute h-full w-full z-20 h-screen px-4 sm:px-20 lg:px-44 2xl:px-96 bg-my-black/90 flex gap-4 flex-col justify-center items-center">
+            <div class="w-full flex flex-col items-center sm:items-start">
+                <h1 class="hero-title text-my-white/80 text-center sm:text-justify">{{TITLE}}
+                </h1>
+                <p class="text-my-white/60 hero-paragraph text-center sm:text-justify w-[300px] sm:w-[500px]">
+                    {{SUBTITLE}}</p>
+                <a href="resume">
+                    <button class="btn-white">{{CTA}}</button>
+                </a>
+            </div>
         </div>
     </div>
-    <!-- <div class="-mt-20 z-50 absolute w-full bottom-0">
-        <svg width="100%" height="100px" id="svg" viewBox="0 0 1440 20" xmlns="http://www.w3.org/2000/svg" class="transition duration-300 ease-in-out delay-150"><path d="M 0,400 L 0,75 C 68.58373205741626,77.64114832535886 137.1674641148325,80.28229665071771 235,81 C 332.8325358851675,81.71770334928229 459.9138755980862,80.51196172248804 575,71 C 690.0861244019138,61.48803827751196 793.1770334928229,43.66985645933014 885,50 C 976.8229665071771,56.33014354066986 1057.377990430622,86.80861244019138 1148,95 C 1238.622009569378,103.19138755980862 1339.311004784689,89.09569377990431 1440,75 L 1440,400 L 0,400 Z" stroke="none" stroke-width="0" fill="#fdf7ec" fill-opacity="0.4" class="transition-all duration-300 ease-in-out delay-150 path-0"></path><path d="M 0,400 L 0,175 C 108.83253588516749,173.77511961722487 217.66507177033498,172.55023923444975 320,175 C 422.334928229665,177.44976076555025 518.1722488038278,183.57416267942585 598,189 C 677.8277511961722,194.42583732057415 741.6459330143542,199.1531100478469 821,189 C 900.3540669856458,178.8468899521531 995.2440191387559,153.8133971291866 1101,149 C 1206.755980861244,144.1866028708134 1323.377990430622,159.59330143540672 1440,175 L 1440,400 L 0,400 Z" stroke="none" stroke-width="0" fill="#fdf7ec" fill-opacity="0.53" class="transition-all duration-300 ease-in-out delay-150 path-1"></path><path d="M 0,400 L 0,275 C 102.05741626794256,268.73205741626793 204.1148325358851,262.46411483253587 306,259 C 407.8851674641149,255.5358851674641 509.5980861244019,254.87559808612437 598,250 C 686.4019138755981,245.12440191387563 761.4928229665072,236.03349282296648 854,241 C 946.5071770334928,245.96650717703352 1056.4306220095693,264.99043062200957 1157,273 C 1257.5693779904307,281.00956937799043 1348.7846889952152,278.0047846889952 1440,275 L 1440,400 L 0,400 Z" stroke="none" stroke-width="0" fill="#fdf7ec" fill-opacity="1" class="transition-all duration-300 ease-in-out delay-150 path-2"></path></svg>
-    </div> -->
+    <svg preserveAspectRatio="none" class="z-50 h-[100px]" width="100%" height="100%" id="svg" viewBox="0 0 1440 390" xmlns="http://www.w3.org/2000/svg">
+        <path d="M 0,400 L 0,75 C 105.37799043062202,87.87081339712918 210.75598086124404,100.74162679425838 296,96 C 381.24401913875596,91.25837320574162 446.3540669856459,68.90430622009569 533,65 C 619.6459330143541,61.09569377990431 727.8277511961722,75.64114832535886 847,77 C 966.1722488038278,78.35885167464114 1096.3349282296651,66.5311004784689 1197,64 C 1297.6650717703349,61.4688995215311 1368.8325358851675,68.23444976076556 1440,75 L 1440,400 L 0,400 Z" stroke="none" stroke-width="0" fill="#fdf7ec" fill-opacity="0.4" class="transition-all duration-300 ease-in-out delay-150 path-0"></path><path d="M 0,400 L 0,175 C 71.41626794258374,181.48803827751198 142.8325358851675,187.97607655502392 237,195 C 331.1674641148325,202.02392344497608 448.08612440191393,209.58373205741628 557,199 C 665.9138755980861,188.41626794258372 766.8229665071771,159.68899521531097 862,155 C 957.1770334928229,150.31100478468903 1046.622009569378,169.66028708133973 1142,177 C 1237.377990430622,184.33971291866027 1338.688995215311,179.66985645933013 1440,175 L 1440,400 L 0,400 Z" stroke="none" stroke-width="0" fill="#fdf7ec" fill-opacity="0.53" class="transition-all duration-300 ease-in-out delay-150 path-1"></path><path d="M 0,400 L 0,275 C 83.70334928229664,281.688995215311 167.40669856459328,288.377990430622 259,285 C 350.5933014354067,281.622009569378 450.07655502392345,268.17703349282294 564,266 C 677.9234449760766,263.82296650717706 806.287081339713,272.9138755980861 902,275 C 997.712918660287,277.0861244019139 1060.7751196172248,272.1674641148325 1145,271 C 1229.2248803827752,269.8325358851675 1334.6124401913876,272.4162679425838 1440,275 L 1440,400 L 0,400 Z" stroke="none" stroke-width="0" fill="#fdf7ec" fill-opacity="1" class="transition-all duration-300 ease-in-out delay-150 path-2"></path>
+    </svg>
 </div>
 
+<!--
+    <svg width="100%" height="100%" id="svg" viewBox="0 0 1440 390" xmlns="http://www.w3.org/2000/svg" class="transition duration-300 ease-in-out delay-150">
+    </svg>
+-->
