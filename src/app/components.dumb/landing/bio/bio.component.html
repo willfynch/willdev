@@ -2,8 +2,16 @@
     <h2 class="text-center titleh2">Qui je suis</h2>
     <div class="grid grid-cols-1  place-items-center gap-4">
         <img height="150px" width="150px" src="../../../../assets/images/me.png" alt="">
+        <div class="flex flex-wrap gap-2">
+            <a href="https://www.linkedin.com/in/williamfinzy/" target="_blank" rel="noopener noreferrer">
+                <i style="font-size: 1.5rem" class="text-my-black hover:text-my-brown pi pi-linkedin mr-2"></i>
+            </a>
+            <a href="https://github.com/willfynch" target="_blank" rel="noopener noreferrer">
+                <i style="font-size: 1.5rem" class="text-my-black hover:text-my-brown pi pi-github mr-2"></i>
+            </a>
+        </div>
         <p class="bg-white/80 shadow-md p-6 rounded-lg max-w-[800px]">
-            Bonjour ! Je suis développeur Angular et NextJS. Je me suis formé d'abord en autodidacte puis 
+            Bonjour ! Je suis développeur Angular et NextJS. Je me suis formé d'abord en autodidacte puis
             j'ai rejoint une formation par alternance d'un an au sein de la PMN avec un contrat chez
             Capgemini. J'ai pu y acquérir, en plus de mes compétences de développement, des compétences
             transverses comme l'utilisation du cloud AWS ainsi que du langage Terraform. Je suis en ce
@@ -14,9 +22,10 @@
     <div class="flex justify-center my-10">
         <div class="flex max-w-[800px] justify-center flex-wrap gap-4 shadow-md p-6 rounded-lg">
             @for(techno of technos; track techno){
-                <div class="w-[50px] sm:w-[60px] h-[50px] sm:h-[60px]">
-                    <img class="w-full h-full hover:brightness-150" matTooltip="{{techno.name}}" src="{{techno.image}}" alt="{{techno.name}}">
-                </div>
+            <div class="w-[50px] sm:w-[60px] h-[50px] sm:h-[60px]">
+                <img class="w-full h-full hover:brightness-150" matTooltip="{{techno.name}}" src="{{techno.image}}"
+                    alt="{{techno.name}}">
+            </div>
             }
         </div>
     </div>

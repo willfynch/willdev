@@ -1,5 +1,5 @@
 export interface Project {
-    title: string;
+    client: string;
     description: string;
     tasks: string[];
     url: string;
@@ -8,4 +8,5 @@ export interface Project {
     company: string;
     job: string;
     duration: string;
+    avatar?:string;
 }

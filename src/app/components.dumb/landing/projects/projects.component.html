@@ -1,21 +1,31 @@
-<section id="bio" class="pt-60">
-    <h2 class="text-center titleh2">Les projets sur lesquels j'ai travaillé</h2>
+<section id="projects" class="pt-60">
+  <h2 class="text-center titleh2">Mes projets</h2>
+  <div class="flex justify-center items-center">
+    <div class="flex flex-wrap justify-center gap-4">
+      @for(project of projects; track project){
+      <div class="relative shadow-md rounded-lg w-[300px] sm:w-[350px] h-[400px] 2xl:h-[450px]">
+        <div class="rounded-t-lg card-image-container relative h-3/5">
+          <img class="rounded-t-lg absolute w-full h-full object-cover"
+            src="../../../../assets/images/{{project.image}}" alt="{{project.client}}">
+          <div class="absolute rounded-t-lg  h-1/2 bg-gradient-to-b from-my-black">
+            <div class="  w-full  p-4  card-header flex items-center justify-center gap-4">
+              <div class="w-[40px]"><img src="{{project.avatar}}" alt=""></div>
+              <div class="flex flex-col">
+                <span class="font-bold text-lg text-my-white">{{project.client}}</span>
+                <span class="text-my-white">{{project.company}} · {{project.job}} · {{project.duration}}</span>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="card-content">
+          <p class="p-4">{{project.description}}</p>
+        </div>
+        <div class="absolute w-full flex justify-center bottom-0 p-4 card-footer">
+          <a class="btn-black" target="_blank" href="{{project.url}}">VISITER</a>
+        </div>
+      </div>
+      }
+    </div>
+  </div>
 
-    @for(project of projects; track project){
-        <mat-card class="example-card">
-            <mat-card-header>
-              <mat-card-title>Shiba Inu</mat-card-title>
-              <mat-card-subtitle>Dog Breed</mat-card-subtitle>
-            </mat-card-header>
-            <mat-card-content>
-              <p>This card indeterminates progress bar.</p>
-              <p>{{project.title}}</p>
-            </mat-card-content>
-            <mat-card-actions>
-              <button mat-button>LIKE</button>
-              <button mat-button>SHARE</button>
-            </mat-card-actions>
-          </mat-card>
-          
-    }
 </section>

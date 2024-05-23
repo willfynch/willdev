@@ -3,8 +3,10 @@ import { Project } from "../app/models/project.model";
 
 export const projects : Project [] = [
     {
-      title: "Miora Sophrologie",
-      description: "Site vitrine",
+      client: "Miora Sophrologie",
+      job: "Développeur Full-Stack",
+      company: "Freelance",
+      description: "Site vitrine pour une sophrologue basée en région parisienne.",
       tasks: [
         "Maquettage",
         "Développement",
@@ -13,13 +15,14 @@ export const projects : Project [] = [
       url: "https://miorasophrologie.fr",
       technos: ["NextJS", "TailwindCSS", "TypeScript", "Netlify", "Figma"],
       image: "portfolio_miorasophrologie.webp",
-      company: "Freelance",
-      job: "Développeur Full-Stack",
-      duration: "3 mois"
+      duration: "3 mois",
+      avatar: "../assets/images/me.png"
     },
     {
-      title: "Du Café et du Code",
-      description: "Site vitrine et éditorial - en cours",
+      client: "Du Café et du Code",
+      job: "Développeur Full-Stack",
+      company: "Freelance",
+      description: "Site vitrine et éditorial pour un studio de développement de sites web. Le projet est en cours de finitions.",
       tasks: [
         "Maquettage",
         "Développement",
@@ -28,16 +31,16 @@ export const projects : Project [] = [
       url: "https://ducafeetducode.com",
       technos: ["NextJS", "TinaCMS", "TailwindCSS", "TypeScript", "Vercel", "Figma", "Hook Form"],
       image: "portfolio_ducafeetducode.webp",
-      company: "Freelance",
-      job: "Développeur Full-Stack",
-      duration: "4 mois"
+      duration: "4 mois",
+      avatar: "../assets/images/me.png"
     },
     {
-      company: "Société Générale",
+      company: 'Capgemini',
+      client: "Société Générale",
       job: "Développeur Angular",
-      image: "logo_sg.png",
+      description: "Portails en intranet pour réaliser des opérations sur le réseau interne.",
+      image: "portfolio_sg.jpg",
       duration: "2 ans",
-      description: "Portails web pour opérations réseau interne",
       tasks: [
         "Agile SCRUM",
         "Développement de nouvelles fonctionnalités",
@@ -48,15 +51,16 @@ export const projects : Project [] = [
         "Documentation"
       ],
       technos: ["Angular", "Material", "RxJS", "TypeScript", "Karma", "Jasmine", "Jenkins", "GitHub"],
-      title: "Portails Web pour Opérations Réseau",
-      url: ""
+      url: "",
+      avatar: "../assets/images/logo_capgemini.png",
     },
     {
-      company: "Indarra",
+      company: 'Capgemini',
+      client: "Indarra",
       job: "DevOps & Chef de Projet",
-      image: "logo_indarra.jpg",
+      image: "portfolio_indarra.png",
       duration: "6 mois",
-      description: "Site Web éditorial d’un fonds de dotation",
+      description: "Site Web éditorial d’un fonds de dotation territorial du Crédit Agricole.",
       tasks: [
         "Agile SCRUM",
         "Réalisation d’un webhook pour relier AWS CodePipeline et Strapi",
@@ -67,15 +71,16 @@ export const projects : Project [] = [
         "Documentation"
       ],
       technos: ["Angular", "Scully", "TypeScript", "Strapi", "PostgreSQL", "AWS"],
-      title: "",
-      url: ""
+      url: "https://www.indarra.fr/",
+      avatar: "../assets/images/logo_capgemini.png",
     },
     {
-      company: "AFJ",
+      company: 'Capgemini',
+      client: "AFJ",
       job: "Dev Full-Stack & DevOps",
       image: "logo_afj.jpg",
       duration: "6 mois",
-      description: "Application de gestion d’un foyer d’hébergement",
+      description: "Application de gestion d’un foyer d’hébergement de victimes de traite humaine.",
       tasks: [
         "Agile SCRUM",
         "Développement de fonctionnalités (formulaires & statistiques)",
@@ -85,7 +90,7 @@ export const projects : Project [] = [
         "Documentation"
       ],
       technos: ["Angular", "Bootstrap", "TypeScript", "NodeJS", "ExpressJS", "MongoDB", "AWS", "Docker"],
-      title: "",
-      url: ""
+      url: "",
+      avatar: "../assets/images/logo_capgemini.png",
     }
   ]
