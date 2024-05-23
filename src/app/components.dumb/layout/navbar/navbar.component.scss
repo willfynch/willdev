@@ -1,4 +1,4 @@
-.onHome {
+.onHome:not(.ham-button) {
     background-color: transparent;
     &>*{color: #fdf7ec;}
     height: 100px;
@@ -17,7 +17,12 @@
         color: #fdf7ec;
     }
 }
-.ham-button.scrolled {
+.navbar:not(.onHome) > .ham-button {
+    
+        color: #221505;
+    
+}
+.ham-button.scrolled, .ham-button:not(.onHome) {
     * {
         color: #221505;
     }

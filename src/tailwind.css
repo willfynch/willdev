@@ -6,7 +6,7 @@
     p {
         line-height: 150%;
     }
-    section {
+    section, footer {
         @apply bg-my-white py-32 px-4 sm:px-20 lg:px-44 2xl:px-96;
     }
     h2 {

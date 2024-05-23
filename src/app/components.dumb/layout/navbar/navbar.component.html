@@ -3,9 +3,9 @@
         👨‍💻 William Finzy
     </a>
     <div class="flex md:hidden">
-        <button class="ham-button" appAddClassOnScroll mat-icon-button [matMenuTriggerFor]="menu" aria-label="Menu">
+        <button [ngClass]="{'onHome':currentRoute==='/'}" class="ham-button" appAddClassOnScroll mat-icon-button [matMenuTriggerFor]="menu" aria-label="Menu">
             <i class="material-icons">menu</i>
-          </button>
+        </button>
         <mat-menu #menu="matMenu">
             @for(navItem of navItems; track navItem){
                 <a href="{{navItem.path}}" mat-menu-item class="flex items-center justify-center">
