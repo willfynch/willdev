@@ -26,7 +26,7 @@ export class ResumeFormationsComponent {
       degree: "Ingénieur Chimiste",
       type: "Formation initiale - 5 ans",
       duration: "2013 - 2018",
-      image: "logo_escom.png",
+      image: "logo_escom.webp",
       color: '#e9ebe3',
       website: 'https://www.escom.fr/'
     }

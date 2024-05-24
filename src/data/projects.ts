@@ -16,7 +16,7 @@ export const projects : Project [] = [
       technos: ["NextJS", "TailwindCSS", "TypeScript", "Netlify", "Figma"],
       image: "portfolio_miorasophrologie.webp",
       duration: "3 mois",
-      avatar: "../assets/images/me.png"
+      avatar: "../assets/images/me.webp"
     },
     {
       client: "Du Café et du Code",
@@ -32,14 +32,14 @@ export const projects : Project [] = [
       technos: ["NextJS", "TinaCMS", "TailwindCSS", "TypeScript", "Vercel", "Figma", "Hook Form"],
       image: "portfolio_ducafeetducode.webp",
       duration: "4 mois",
-      avatar: "../assets/images/me.png"
+      avatar: "../assets/images/me.webp"
     },
     {
       company: 'Capgemini',
       client: "Société Générale",
       job: "Développeur Angular",
       description: "Portails en intranet pour réaliser des opérations sur le réseau interne.",
-      image: "portfolio_sg.jpg",
+      image: "portfolio_sg.webp",
       duration: "2 ans",
       tasks: [
         "Agile SCRUM",
@@ -52,13 +52,13 @@ export const projects : Project [] = [
       ],
       technos: ["Angular", "Material", "RxJS", "TypeScript", "Karma", "Jasmine", "Jenkins", "GitHub"],
       url: "",
-      avatar: "../assets/images/logo_capgemini.png",
+      avatar: "../assets/images/logo_capgemini.webp",
     },
     {
       company: 'Capgemini',
       client: "Indarra",
       job: "DevOps & Chef de Projet",
-      image: "portfolio_indarra.png",
+      image: "portfolio_indarra.webp",
       duration: "6 mois",
       description: "Site Web éditorial d’un fonds de dotation territorial du Crédit Agricole.",
       tasks: [
@@ -72,13 +72,13 @@ export const projects : Project [] = [
       ],
       technos: ["Angular", "Scully", "TypeScript", "Strapi", "PostgreSQL", "AWS"],
       url: "https://www.indarra.fr/",
-      avatar: "../assets/images/logo_capgemini.png",
+      avatar: "../assets/images/logo_capgemini.webp",
     },
     {
       company: 'Capgemini',
       client: "AFJ",
       job: "Dev Full-Stack & DevOps",
-      image: "logo_afj.jpg",
+      image: "logo_afj.webp",
       duration: "6 mois",
       description: "Application de gestion d’un foyer d’hébergement de victimes de traite humaine.",
       tasks: [
@@ -91,6 +91,6 @@ export const projects : Project [] = [
       ],
       technos: ["Angular", "Bootstrap", "TypeScript", "NodeJS", "ExpressJS", "MongoDB", "AWS", "Docker"],
       url: "",
-      avatar: "../assets/images/logo_capgemini.png",
+      avatar: "../assets/images/logo_capgemini.webp",
     }
   ]

@@ -19,7 +19,7 @@ export class ResumeExperienceComponent {
      {
       company: "Société Générale",
       job: "Développeur Angular",
-      image: "logo_sg.png",
+      image: "logo_sg.webp",
       duration: "2 ans",
       description: "Portails web pour opérations réseau interne",
       tasks: [
@@ -36,7 +36,7 @@ export class ResumeExperienceComponent {
     {
       company: "Indarra",
       job: "DevOps & Chef de Projet",
-      image: "logo_indarra.jpg",
+      image: "logo_indarra.webp",
       duration: "6 mois",
       description: "Site Web éditorial d’un fonds de dotation",
       tasks: [
@@ -53,7 +53,7 @@ export class ResumeExperienceComponent {
     {
       company: "AFJ",
       job: "Dev Full-Stack & DevOps",
-      image: "logo_afj.jpg",
+      image: "logo_afj.webp",
       duration: "6 mois",
       description: "Application de gestion d’un foyer d’hébergement",
       tasks: [
