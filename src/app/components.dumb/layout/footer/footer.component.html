@@ -9,7 +9,7 @@
         stroke="none" stroke-width="0" fill="#d4c09e" fill-opacity="1"
         class="transition-all duration-300 ease-in-out delay-150 path-1"></path>
 </svg>
-<footer class="bg-my-brown flex flex-col justify-between py-8">
+<footer [ngClass]="{'onResume':currentRoute==='/resume'}" class="bg-my-brown flex flex-col justify-between py-8">
     <div class="grid grid-cols-1 md:grid-cols-3 my-4">
         <div class="flex flex-col items-start px-10 md:px-0">
             <a class="text-my-black text-lg font-bold flex justify-center items-center" href="/">

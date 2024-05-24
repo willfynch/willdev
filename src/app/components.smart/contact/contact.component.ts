@@ -1,12 +1,12 @@
 import { Component } from '@angular/core';
 import {FormBuilder, FormGroup, FormsModule, ReactiveFormsModule, Validators } from '@angular/forms';
-import {Contact } from '../../../models/contact.model';
+import {Contact } from '../../models/contact.model';
 import {MatFormFieldModule} from '@angular/material/form-field'
 import {MatInputModule} from '@angular/material/input'
-import { EmailjsService } from '../../../services/emailjs.service';
+import { EmailjsService } from '../../services/emailjs.service';
 import { CommonModule } from '@angular/common';
 import {MatProgressSpinnerModule} from '@angular/material/progress-spinner';
-import {MatSnackBar, MatSnackBarConfig, MatSnackBarHorizontalPosition, MatSnackBarVerticalPosition} from '@angular/material/snack-bar';
+import {MatSnackBar, MatSnackBarConfig} from '@angular/material/snack-bar';
 @Component({
   selector: 'app-contact',
   standalone: true,

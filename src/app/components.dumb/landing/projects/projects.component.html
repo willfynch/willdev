@@ -21,7 +21,9 @@
           <p class="p-4">{{project.description}}</p>
         </div>
         <div class="absolute w-full flex justify-center bottom-0 p-4 card-footer">
-          <a class="btn-black" target="_blank" href="{{project.url}}">VISITER</a>
+          @if(project.url.length >0){
+            <a class="btn-black" target="_blank" href="{{project.url}}">VISITER</a>
+          }
         </div>
       </div>
       }

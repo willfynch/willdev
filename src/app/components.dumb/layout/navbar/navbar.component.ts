@@ -2,7 +2,7 @@ import { Component } from '@angular/core';
 import { navItem } from '../../../models/navItem.model';
 import {MatIconModule} from '@angular/material/icon'; 
 import { AddClassOnScrollDirective } from '../../../directives/add-class-on-scroll.directive';
-import { ActivatedRoute, Navigation, NavigationEnd, Router, RouterEvent } from '@angular/router';
+import { NavigationEnd, Router } from '@angular/router';
 import { CommonModule } from '@angular/common';
 import {MatMenuModule} from '@angular/material/menu'
 
@@ -20,7 +20,7 @@ export class NavbarComponent {
      {label: 'CV', path: 'resume', icon: 'person'}
   ]
 
-  constructor(private activatedRoute: ActivatedRoute, private router: Router){}
+  constructor(private router: Router){}
   ngOnInit(){
     this.router.events.subscribe((event:any)=>{
        if(event instanceof NavigationEnd){
