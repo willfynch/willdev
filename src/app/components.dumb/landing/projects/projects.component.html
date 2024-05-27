@@ -3,11 +3,11 @@
   <div class="flex justify-center items-center">
     <div class="flex flex-wrap justify-center gap-4">
       @for(project of projects; track project){
-      <div class="relative shadow-md rounded-lg w-[300px] sm:w-[350px] h-[400px] 2xl:h-[450px]">
-        <div class="rounded-t-lg card-image-container relative h-3/5">
-          <img class="rounded-t-lg absolute w-full h-full object-cover"
+      <div class="bg-white group relative shadow-md rounded-lg w-full sm:w-[300px]  h-[400px] 2xl:h-[450px]">
+        <div class="overflow-hidden rounded-t-lg card-image-container relative h-3/5">
+          <img class="duration-200 group-hover:scale-110 rounded-t-lg absolute w-full h-full object-cover"
             src="../../../../assets/images/{{project.image}}" alt="{{project.client}}">
-          <div class="absolute rounded-t-lg  h-1/2 bg-gradient-to-b from-my-black">
+          <div class="absolute rounded-t-lg  h-1/2 w-full bg-gradient-to-b from-my-black">
             <div class="  w-full  p-4  card-header flex items-center justify-center gap-4">
               <div class="w-[40px]"><img src="{{project.avatar}}" alt=""></div>
               <div class="flex flex-col">

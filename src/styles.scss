@@ -2,6 +2,7 @@
 
 @import './tailwind.css';
 @import 'primeicons/primeicons.css';
+@import url('https://fonts.googleapis.com/css2?family=Caveat:wght@400..700&display=swap');
 
 html {
     scroll-behavior: smooth;
@@ -29,3 +30,4 @@ body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif;}
     --mat-snack-bar-button-color: #dc2626 !important;
     --mdc-snackbar-container-color: #fecaca !important;
 }
+

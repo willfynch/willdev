@@ -9,18 +9,6 @@
     section, footer {
         @apply bg-my-white py-32 px-4 sm:px-20 lg:px-44 2xl:px-96;
     }
-    h2 {
-        font-size: 2rem;
-        margin: 0 0 4rem 0;
-    }
-    h2::before {
-        content: "";
-        position: absolute;
-        background-color: #D4C09E;
-        width: 80px;
-        margin-top: 35px;
-        height: 5px;
-    }
 }
 
 @layer components {

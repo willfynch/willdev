@@ -1,7 +1,7 @@
-<section id="bio" class="">
+<section id="bio">
     <h2 class="text-center titleh2">Qui je suis</h2>
-    <div class="grid grid-cols-1  place-items-center gap-4">
-        <img height="150px" width="150px" src="../../../../assets/images/me.webp" alt="">
+    <div class="grid grid-cols-1  place-items-center gap-4 mb-10">
+        <img class="rounded-full" height="150px" width="150px" src="../../../../assets/images/me.webp" alt="">
         <div class="flex flex-wrap gap-2">
             <a href="https://www.linkedin.com/in/williamfinzy/" target="_blank" rel="noopener noreferrer">
                 <i style="font-size: 1.5rem" class="text-my-black hover:text-my-brown pi pi-linkedin mr-2"></i>
@@ -10,14 +10,12 @@
                 <i style="font-size: 1.5rem" class="text-my-black hover:text-my-brown pi pi-github mr-2"></i>
             </a>
         </div>
-        <p class="bg-white/80 shadow-md p-6 rounded-lg max-w-[800px]">
-            Bonjour ! Je suis développeur Angular et NextJS. Je me suis formé d'abord en autodidacte puis
-            j'ai rejoint une formation par alternance d'un an au sein de la PMN avec un contrat chez
-            Capgemini. J'ai pu y acquérir, en plus de mes compétences de développement, des compétences
-            transverses comme l'utilisation du cloud AWS ainsi que du langage Terraform. Je suis en ce
-            moment en train de me former sur NestJS.
+        <p class="bg-white/80   p-6 rounded-lg max-w-[800px] shadow-md">
+            {{bio}}
         </p>
     </div>
+
+    <p class="text-center w-full">J'aime bien travailler avec ces outils-là ⬇️</p>
 
     <div class="flex justify-center my-10">
         <div class="flex max-w-[800px] justify-center flex-wrap gap-4 shadow-md p-6 rounded-lg">
