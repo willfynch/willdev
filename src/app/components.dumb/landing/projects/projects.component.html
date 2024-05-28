@@ -1,11 +1,12 @@
-<section id="projects" class="pt-60">
+<section id="projects" class="pt-60 ">
   <h2 class="text-center titleh2">Mes projets</h2>
   <div class="flex justify-center items-center">
-    <div class="flex flex-wrap justify-center gap-4">
+    <div class="projects-container w-full">
       @for(project of projects; track project){
-      <div class="bg-white group relative shadow-md rounded-lg w-full md:w-[280px]  h-[400px]">
-        <div class="overflow-hidden rounded-t-lg card-image-container relative h-3/5">
-          <img class="duration-200 group-hover:scale-110 rounded-t-lg absolute w-full h-full object-cover"
+      <div class="bg-white group relative shadow-md rounded-lg project-card ">
+        <div class="overflow-hidden rounded-t-lg card-image-container relative">
+          <img
+            class="project-card-image duration-200 group-hover:scale-110 rounded-t-lg absolute w-full h-full object-cover"
             src="../../../../assets/images/{{project.image}}" alt="{{project.client}}">
           <div class="absolute rounded-t-lg  h-1/2 w-full bg-gradient-to-b from-my-black">
             <div class="  w-full  p-4  card-header flex items-center justify-center gap-4">
@@ -22,7 +23,7 @@
         </div>
         <div class="absolute w-full flex justify-center bottom-0 p-4 card-footer">
           @if(project.url.length >0){
-            <a class="btn-black" target="_blank" href="{{project.url}}">VISITER</a>
+          <a class="btn-black" target="_blank" href="{{project.url}}">VISITER</a>
           }
         </div>
       </div>
