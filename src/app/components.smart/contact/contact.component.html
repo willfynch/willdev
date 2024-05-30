@@ -32,7 +32,7 @@
             </mat-form-field>
 
             <div class="flex justify-center">
-                <button [disabled]="resultEmailLoading" [ngClass]="{' loading ':resultEmailLoading}" type="submit" class="flex gap-2 w-content btn-black">
+                <button [disabled]="resultEmailLoading || contactForm.invalid" [ngClass]="{' greyed ':resultEmailLoading || contactForm.invalid}" type="submit" class="flex gap-2 w-content btn-black">
                     @if(resultEmailLoading){
                         <mat-spinner diameter="20"></mat-spinner>
                     }
