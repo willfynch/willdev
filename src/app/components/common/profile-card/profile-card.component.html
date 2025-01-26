@@ -1,0 +1,57 @@
+<section appFadeIn [delay]=".5" hlmCard class="flex justify-center flex-col">
+    <div hlmCardContent class="flex justify-between items-center gap-4 !pt-6 flex-wrap">
+        <div class="flex justify-start items-center gap-2">
+            <hlm-avatar>
+                <img
+                    src="/assets/images/profile_pic.webp"
+                    alt="spartan logo. Resembling a spartanic shield"
+                    hlmAvatarImage />
+                <span class="text-white bg-destructive" hlmAvatarFallback>WF</span>
+            </hlm-avatar>
+            <div class="text-sm">
+                <p class="font-bold">William Finzy</p>
+                <p class="text-black/50">Front-End Developer</p>
+            </div>
+        </div>
+        <div class="flex gap-2">
+            <a [routerLink]="['/contact']" hlmBtn variant="secondary">Contact</a>
+            <button hlmBtn variant="outline" (click)="copyEmailService.copyEmail()">
+                <ng-icon class="mr-2" name="lucideCopy" />
+                {{ copyEmailService.copyEmailText() }}
+            </button>
+        </div>
+    </div>
+    @if (page() === "/home") {
+        <div hlmCardContent>
+            <brn-separator class="my-4" hlmSeparator></brn-separator>
+            <p class="text-sm text-primary">{{ BIO }}</p>
+            <div>
+                <h3 class="text-primary text-sm mb-2 mt-6">🛠️ Main tools</h3>
+                <div class="flex flex-wrap gap-2">
+                    @for(techno of TECHNOS; track techno){
+                        <span variant="blue" hlmBadge>{{techno}}</span>
+                    }
+                </div>
+            </div>
+        </div>
+    }
+
+    <div hlmCardContent>
+        <brn-separator class="mt-2 mb-4" hlmSeparator></brn-separator>
+        <div class="flex justify-center flex-wrap gap-2">
+            <a
+                target="_blank"
+                href="../../../../assets/pdfs/cv_william_finzy_developpeur_angular_react.pdf"
+                hlmBtn
+                variant="secondary">
+                <ng-icon class="mr-2" name="lucideDownload" />
+                Download resume
+            </a>
+            <a class="group" target="_blank" href="https://www.linkedin.com/in/williamfinzy/" hlmBtn variant="blueBtn">
+                <span class="mr-2 group-hover:translate-x-1 duration-300">👉</span> Add me on LinkedIn
+            </a>
+        </div>
+    </div>
+</section>
+
+

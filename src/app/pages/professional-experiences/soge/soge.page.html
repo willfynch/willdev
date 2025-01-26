@@ -1,0 +1,28 @@
+<app-company-logo
+    [company]="content.company"
+    [dates]="content.dates"
+    [position]="content.position"
+    [bannerImage]="content.companyBannerImage"
+    [logo]="content.companyLogo"></app-company-logo>
+
+<ul class="my-6 p-4">
+    @for(description of content.description; track description){
+    <li>
+        <p class="my-2 text-primary text-sm">🔹 {{description}}</p>
+    </li>
+    }
+</ul>
+
+<ul class="my-6 p-4 border rounded-sm">
+    @for(task of content.tasks; track task){
+    <li>
+        <p class="my-2 text-primary text-sm">✅ {{task}}</p>
+    </li>
+    }
+</ul>
+
+<div class="grid grid-cols-1 gap-4 mt-4">
+    @for(project of content.projects; track project.name){
+        <app-project-details [project]="project"/>
+    }
+</div>
