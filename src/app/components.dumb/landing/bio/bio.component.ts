@@ -3,11 +3,11 @@ import { Techno } from '../../../models/techno.model';
 import {MatTooltipModule} from '@angular/material/tooltip';
 
 @Component({
-  selector: 'app-bio',
-  standalone: true,
-  imports: [MatTooltipModule],
-  templateUrl: './bio.component.html',
-  styleUrl: './bio.component.scss'
+    selector: 'app-bio',
+    imports: [MatTooltipModule],
+    standalone: true,
+    templateUrl: './bio.component.html',
+    styleUrl: './bio.component.scss'
 })
 export class BioComponent {
 

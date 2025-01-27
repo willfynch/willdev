@@ -7,11 +7,11 @@ export enum TEXT {
 }
 
 @Component({
-  selector: 'app-hero',
-  standalone: true,
-  imports:  [MatIconModule],
-  templateUrl: './hero.component.html',
-  styleUrl: './hero.component.scss'
+    selector: 'app-hero',
+    imports: [MatIconModule],
+    standalone: true,
+    templateUrl: './hero.component.html',
+    styleUrl: './hero.component.scss'
 })
 export class HeroComponent {
 

@@ -1,9 +1,7 @@
-import { Routes } from '@angular/router';
 import { HomeComponent } from './pages/home/home.component';
-import { ResumeComponent } from './pages/resume/resume.component';
+import { Route } from '@angular/router';
 
 
-export const routes: Routes = [
-  {path: '', component: HomeComponent},
-  {path: 'resume', component: ResumeComponent}
+export const routes: Route[] = [
+  {path: '', component: HomeComponent}
 ];

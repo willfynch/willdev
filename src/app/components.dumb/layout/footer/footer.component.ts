@@ -1,27 +1,16 @@
 import { CommonModule } from '@angular/common';
-import { Component } from '@angular/core';
-import { NavigationEnd, Router } from '@angular/router';
+import { Component, inject } from '@angular/core';
 
 @Component({
-  selector: 'app-footer',
-  standalone: true,
-  imports: [CommonModule],
-  templateUrl: './footer.component.html',
-  styleUrl: './footer.component.scss'
+    selector: 'app-footer',
+    imports: [CommonModule],
+    standalone: true,
+    templateUrl: './footer.component.html',
+    styleUrl: './footer.component.scss'
 })
 export class FooterComponent {
 
   currentRoute: string | undefined = '';
-  constructor(private router: Router){
-
-  }
-  ngOnInit(){
-    this.router.events.subscribe((event:any)=>{
-      if(event instanceof NavigationEnd){
-       this.currentRoute = event.urlAfterRedirects
-      }
-   })
-  }
-
+  currentDate = new Date().getFullYear();
 
 }

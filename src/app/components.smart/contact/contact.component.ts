@@ -1,5 +1,4 @@
 import { Component } from '@angular/core';
-import {FormBuilder, FormGroup, FormsModule, ReactiveFormsModule, Validators } from '@angular/forms';
 import {Contact } from '../../models/contact.model';
 import {MatFormFieldModule} from '@angular/material/form-field'
 import {MatInputModule} from '@angular/material/input'
@@ -7,12 +6,13 @@ import { EmailjsService } from '../../services/emailjs.service';
 import { CommonModule } from '@angular/common';
 import {MatProgressSpinnerModule} from '@angular/material/progress-spinner';
 import {MatSnackBar, MatSnackBarConfig} from '@angular/material/snack-bar';
+import { FormBuilder, FormGroup, FormsModule, ReactiveFormsModule, Validators } from '@angular/forms';
 @Component({
-  selector: 'app-contact',
-  standalone: true,
-  imports: [CommonModule, MatFormFieldModule,MatInputModule, FormsModule, ReactiveFormsModule, MatProgressSpinnerModule],
-  templateUrl: './contact.component.html',
-  styleUrl: './contact.component.scss'
+    selector: 'app-contact',
+    imports: [CommonModule, MatFormFieldModule, MatInputModule, FormsModule, ReactiveFormsModule, MatProgressSpinnerModule],
+    templateUrl: './contact.component.html',
+    styleUrl: './contact.component.scss',
+    standalone: true
 })
 export class ContactComponent {
 
