@@ -1,5 +1,7 @@
 import { Component } from '@angular/core';
-import { MatIconModule } from '@angular/material/icon';
+
+import { HlmButtonDirective } from '@spartan-ng/ui-button-helm';
+
 export enum TEXT {
   TITLE = `Du code. Du café.`,
   SUBTITLE = `Je développe des sites web et des applications intuitives et ergonomiques à l'aide d'Angular et NextJS.`,
@@ -8,8 +10,8 @@ export enum TEXT {
 
 @Component({
     selector: 'app-hero',
-    imports: [MatIconModule],
     standalone: true,
+    imports: [HlmButtonDirective],
     templateUrl: './hero.component.html',
     styleUrl: './hero.component.scss'
 })

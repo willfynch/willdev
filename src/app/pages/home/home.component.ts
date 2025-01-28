@@ -9,7 +9,7 @@ import { ProjectsComponent } from '../../components.dumb/landing/projects/projec
 @Component({
     selector: 'app-home',
     imports: [
-        HeroComponent, BioComponent, ContactComponent, ProjectsComponent
+        
     ],
     standalone: true,
     templateUrl: './home.component.html',

@@ -4,7 +4,7 @@
     <h2 class="titleh2 text-center">Pour me contacter</h2>
     <div class=" grid grid-cols-1 place-items-center">
         <form (ngSubmit)="submitContactForm()" class="w-full max-w-[800px] flex flex-col" [formGroup]="contactForm">
-            <mat-form-field>
+            <!-- <mat-form-field>
                 <mat-label>Nom</mat-label>
                 <input matInput formControlName="name">
                 @if(name?.invalid){
@@ -29,12 +29,12 @@
                 @if(body?.invalid){
                 <mat-error>{{ERROR.REQUIRED}}</mat-error>
                 }
-            </mat-form-field>
+            </mat-form-field> -->
 
             <div class="flex justify-center">
                 <button [disabled]="resultEmailLoading || contactForm.invalid" [ngClass]="{' greyed ':resultEmailLoading || contactForm.invalid}" type="submit" class="flex gap-2 w-content btn-black">
                     @if(resultEmailLoading){
-                        <mat-spinner diameter="20"></mat-spinner>
+                        <!-- spinner -->
                     }
                     {{SUBMIT}}
                 </button>

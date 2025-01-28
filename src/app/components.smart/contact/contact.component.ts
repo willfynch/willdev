@@ -1,18 +1,14 @@
 import { Component } from '@angular/core';
 import {Contact } from '../../models/contact.model';
-import {MatFormFieldModule} from '@angular/material/form-field'
-import {MatInputModule} from '@angular/material/input'
 import { EmailjsService } from '../../services/emailjs.service';
 import { CommonModule } from '@angular/common';
-import {MatProgressSpinnerModule} from '@angular/material/progress-spinner';
-import {MatSnackBar, MatSnackBarConfig} from '@angular/material/snack-bar';
 import { FormBuilder, FormGroup, FormsModule, ReactiveFormsModule, Validators } from '@angular/forms';
 @Component({
     selector: 'app-contact',
-    imports: [CommonModule, MatFormFieldModule, MatInputModule, FormsModule, ReactiveFormsModule, MatProgressSpinnerModule],
+    standalone: true,
+    imports: [CommonModule, FormsModule, ReactiveFormsModule],
     templateUrl: './contact.component.html',
-    styleUrl: './contact.component.scss',
-    standalone: true
+    styleUrl: './contact.component.scss'
 })
 export class ContactComponent {
 
@@ -25,7 +21,7 @@ export class ContactComponent {
 
   contactForm: FormGroup
 
-  constructor(private formBuilder: FormBuilder, private emailJs: EmailjsService, private _snackBar: MatSnackBar){
+  constructor(private formBuilder: FormBuilder, private emailJs: EmailjsService){
     this.contactForm = this.formBuilder.group({
       name: ['', Validators.required],
       email: ['', Validators.compose([Validators.required, Validators.email])],
@@ -55,12 +51,7 @@ export class ContactComponent {
   }
  
   openSnackBar(message: string, action: string, classes?: string | string[]) {
-    const config: MatSnackBarConfig = {
-      horizontalPosition: 'right',
-      verticalPosition: 'top',
-      panelClass: classes,
-    }
-    this._snackBar.open(message, action, config);
+    console.log(message)
   }
 
   get name(){

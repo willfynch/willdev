@@ -30,12 +30,14 @@
               "src/assets"
             ],
             "styles": [
-              "src/styles.scss"
+              "src/styles.css"
             ],
-            "scripts": [{
-              "input": "node_modules/@emailjs/browser/cjs/index.js",
-              "inject": false
-            }],
+            "scripts": [
+              {
+                "input": "node_modules/@emailjs/browser/cjs/index.js",
+                "inject": false
+              }
+            ],
             "server": "src/main.server.ts",
             "prerender": {
               "discoverRoutes": true
@@ -48,9 +50,9 @@
             "production": {
               "optimization": {
                 "scripts": true,
-                 "styles": true,
-                 "fonts": false
-             },
+                "styles": true,
+                "fonts": false
+              },
               "budgets": [
                 {
                   "type": "initial",
@@ -109,6 +111,36 @@
               "src/styles.scss"
             ],
             "scripts": []
+          }
+        },
+        "storybook": {
+          "builder": "@storybook/angular:start-storybook",
+          "options": {
+            "configDir": ".storybook",
+            "browserTarget": "willdev:build",
+            "compodoc": true,
+            "compodocArgs": [
+              "-e",
+              "json",
+              "-d",
+              "."
+            ],
+            "port": 6006
+          }
+        },
+        "build-storybook": {
+          "builder": "@storybook/angular:build-storybook",
+          "options": {
+            "configDir": ".storybook",
+            "browserTarget": "willdev:build",
+            "compodoc": true,
+            "compodocArgs": [
+              "-e",
+              "json",
+              "-d",
+              "."
+            ],
+            "outputDir": "storybook-static"
           }
         }
       }
