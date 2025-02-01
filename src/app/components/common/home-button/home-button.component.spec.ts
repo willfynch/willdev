@@ -1,23 +1,29 @@
-import { ComponentFixture, TestBed } from '@angular/core/testing';
+import { ComponentFixture, TestBed } from "@angular/core/testing"
+import { RouterTestingHarness } from "@angular/router/testing"
+import { HomeButtonComponent } from "./home-button.component"
+import { ComponentRef } from "@angular/core"
 
-import { HomeButtonComponent } from './home-button.component';
+describe("HomeButtonComponent", () => {
+    let component: HomeButtonComponent
+    let componentRef: ComponentRef<HomeButtonComponent>
+    let fixture: ComponentFixture<HomeButtonComponent>
+    const harness = RouterTestingHarness.create()
 
-describe('HomeButtonComponent', () => {
-  let component: HomeButtonComponent;
-  let fixture: ComponentFixture<HomeButtonComponent>;
+    beforeEach(async () => {
+        await TestBed.configureTestingModule({
+            imports: [HomeButtonComponent],
+        }).compileComponents()
 
-  beforeEach(async () => {
-    await TestBed.configureTestingModule({
-      imports: [HomeButtonComponent]
+        fixture = TestBed.createComponent(HomeButtonComponent)
+        component = fixture.componentInstance
+        componentRef = fixture.componentRef
+        componentRef.setInput("buttonNavigateTo", "projects")
+        fixture.detectChanges()
     })
-    .compileComponents();
 
-    fixture = TestBed.createComponent(HomeButtonComponent);
-    component = fixture.componentInstance;
-    fixture.detectChanges();
-  });
+    it("should create", () => {
+        expect(component).toBeTruthy()
+    })
 
-  it('should create', () => {
-    expect(component).toBeTruthy();
-  });
-});
+    it('should navigate to path "projects"', () => {})
+})

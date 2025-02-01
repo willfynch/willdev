@@ -1,33 +1,35 @@
-
-@import '@angular/cdk/overlay-prebuilt.css';
+@import "@angular/cdk/overlay-prebuilt.css";
 
 /* You can add global styles to this file, and also import other style files */
 
-
-@import 'primeicons/primeicons.css';
-@import url('https://fonts.googleapis.com/css2?family=Caveat:wght@400..700&display=swap');
+@import "primeicons/primeicons.css";
+@import url("https://fonts.googleapis.com/css2?family=Caveat:wght@400..700&display=swap");
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 html {
-scroll-behavior: smooth;
+    scroll-behavior: smooth;
 }
 
-
-html, body { height: 100%; }
-body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif;}
+html,
+body {
+    height: 100%;
+}
+body {
+    margin: 0;
+    font-family: "Inter-Medium", "Inter", sans-serif;
+    /**font-family: Roboto, "Helvetica Neue", sans-serif;**/
+}
 * {
-color: #160f0b;
+    color: #160f0b;
 }
 
-
 :root {
---font-sans: ''
+    --font-sans: "";
 }
 
-
 :root {
-    --font-sans: '';
+    --font-sans: "";
     --background: 0 0% 100%;
     --foreground: 240 10% 3.9%;
     --card: 0 0% 100%;
@@ -49,9 +51,9 @@ color: #160f0b;
     --ring: 240 5.9% 10%;
     --radius: 0.5rem;
     color-scheme: light;
-  }
-  
-  .dark {
+}
+
+.dark {
     --background: 240 10% 3.9%;
     --foreground: 0 0% 98%;
     --card: 240 10% 3.9%;
@@ -72,13 +74,10 @@ color: #160f0b;
     --input: 240 3.7% 15.9%;
     --ring: 240 4.9% 83.9%;
     color-scheme: dark;
-  }
-  
-  @layer base {
+}
+
+@layer base {
     * {
-      @apply border-border;
+        @apply border-border;
     }
-  }
-  
-
-
+}

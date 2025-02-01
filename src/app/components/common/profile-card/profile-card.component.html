@@ -1,0 +1,25 @@
+<section hlmCard class="h-20 flex justify-center flex-col">
+  <div hlmCardContent class="flex justify-between items-center !pt-6">
+    <div class="flex justify-start items-center gap-2">
+      <hlm-avatar>
+        <img
+          src="/assets/images/profile_pic.webp"
+          alt="spartan logo. Resembling a spartanic shield"
+          hlmAvatarImage
+        />
+        <span class="text-white bg-destructive" hlmAvatarFallback>WF</span>
+      </hlm-avatar>
+      <div class="text-sm">
+        <p class="font-bold">William Finzy</p>
+        <p class="text-black/50">Angular Developer</p>
+      </div>
+    </div>
+    <div class="flex gap-2">
+        <a [routerLink]="['/contact']"  hlmBtn variant='secondary'>Contact</a>
+        <button hlmBtn variant="outline" (click)="copyEmail()">
+            <ng-icon class="mr-2" name="lucideCopy"/>
+            {{copyEmailText()}}
+        </button>
+    </div>
+  </div>
+</section>

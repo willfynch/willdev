@@ -1,7 +1,8 @@
-<button hlmBtn size="icon" class="w-20 h-20" variant="outline">
-  <ng-icon class="w-full h-full" name="lucideUser" />
-</button>
-
-<!-- LES BUTTONS -->
-
-<router-outlet></router-outlet>
+<main class="relative">
+  <app-navbar  [navItems]="navItems()"></app-navbar>
+  <div class="flex justify-center mt-4">
+    <div class="w-[500px]">
+      <router-outlet></router-outlet>
+    </div>
+  </div>
+</main>
