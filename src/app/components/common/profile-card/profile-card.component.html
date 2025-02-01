@@ -1,4 +1,4 @@
-<section hlmCard class="h-20 flex justify-center flex-col">
+<section hlmCard class=" flex justify-center flex-col">
   <div hlmCardContent class="flex justify-between items-center !pt-6">
     <div class="flex justify-start items-center gap-2">
       <hlm-avatar>
@@ -22,4 +22,12 @@
         </button>
     </div>
   </div>
+  @if(page() === "home"){
+    <div hlmCardContent>
+        <brn-separator hlmSeparator></brn-separator>
+        <p class="text-sm text-black/50">{{BIO}}</p>
+    </div>
+    }
+   
+
 </section>

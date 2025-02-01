@@ -5,17 +5,17 @@ import { HlmButtonDirective } from "@spartan-ng/ui-button-helm"
 import { HlmTooltipTriggerDirective } from "@spartan-ng/ui-tooltip-helm"
 
 @Component({
-    selector: "app-home-button",
+    selector: "app-navbar-button",
     imports: [
         HlmButtonDirective,
         NgIcon,
         HlmTooltipTriggerDirective,
         RouterLink,
     ],
-    templateUrl: "./home-button.component.html",
-    styleUrl: "./home-button.component.scss",
+    templateUrl: "./navbar-button.component.html",
+    styleUrl: "./navbar-button.component.scss",
 })
-export class HomeButtonComponent {
+export class NavbarButtonComponent {
     iconName = input<IconType | undefined>()
     buttonNavigateTo = input<string>()
     toolTip = input<string>()

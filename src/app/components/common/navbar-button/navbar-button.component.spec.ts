@@ -1,20 +1,20 @@
 import { ComponentFixture, TestBed } from "@angular/core/testing"
 import { RouterTestingHarness } from "@angular/router/testing"
-import { HomeButtonComponent } from "./home-button.component"
+import { NavbarButtonComponent } from "./navbar-button.component"
 import { ComponentRef } from "@angular/core"
 
-describe("HomeButtonComponent", () => {
-    let component: HomeButtonComponent
-    let componentRef: ComponentRef<HomeButtonComponent>
-    let fixture: ComponentFixture<HomeButtonComponent>
+describe("NavbarButtonComponent", () => {
+    let component: NavbarButtonComponent
+    let componentRef: ComponentRef<NavbarButtonComponent>
+    let fixture: ComponentFixture<NavbarButtonComponent>
     const harness = RouterTestingHarness.create()
 
     beforeEach(async () => {
         await TestBed.configureTestingModule({
-            imports: [HomeButtonComponent],
+            imports: [NavbarButtonComponent],
         }).compileComponents()
 
-        fixture = TestBed.createComponent(HomeButtonComponent)
+        fixture = TestBed.createComponent(NavbarButtonComponent)
         component = fixture.componentInstance
         componentRef = fixture.componentRef
         componentRef.setInput("buttonNavigateTo", "projects")

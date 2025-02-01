@@ -1,7 +1,7 @@
 <header class= "w-full flex justify-center mt-4 sticky top-0">
     <nav class="flex justify-center gap-2 border-solid border-[1px] w-64 rounded-2xl p-4">
         @for(navItem of navItems(); track navItem.id){
-            <app-home-button [active]="navItem.active" [toolTip]="navItem.toolTip" [iconName]="navItem.iconName" [buttonNavigateTo]="navItem.buttonNavigateTo" ></app-home-button>
+            <app-navbar-button [active]="navItem.active" [toolTip]="navItem.toolTip" [iconName]="navItem.iconName" [buttonNavigateTo]="navItem.buttonNavigateTo" ></app-navbar-button>
         }
     </nav>
 </header>

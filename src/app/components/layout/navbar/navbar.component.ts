@@ -1,14 +1,11 @@
-import { Component, inject, input } from "@angular/core"
-import { navItem } from "../../../models/navItem.model"
-import { AddClassOnScrollDirective } from "../../../directives/add-class-on-scroll.directive"
+import { Component, input } from "@angular/core"
 import { CommonModule } from "@angular/common"
-import { HomeButtonComponent } from "../../common/home-button/home-button.component"
 import { INavbarItems } from "./navbar"
-import { Router } from "@angular/router"
+import { NavbarButtonComponent } from "../../common/navbar-button/navbar-button.component"
 
 @Component({
     selector: "app-navbar",
-    imports: [HomeButtonComponent, CommonModule],
+    imports: [NavbarButtonComponent, CommonModule],
     standalone: true,
     templateUrl: "./navbar.component.html",
     styleUrl: "./navbar.component.scss",

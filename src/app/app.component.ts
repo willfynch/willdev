@@ -4,7 +4,6 @@ import { NavigationEnd, Router, RouterOutlet } from "@angular/router"
 import { provideIcons } from "@ng-icons/core"
 import {
     lucideBriefcaseBusiness,
-    lucideContact,
     lucideHouse,
     lucideMail,
     lucideUser,
@@ -14,7 +13,7 @@ import { NavbarComponent } from "./components/layout/navbar/navbar.component"
 import { NAV_ITEMS } from "./utilities/constants/navitems.const"
 import { Subscription } from "rxjs"
 import { INavbarItems, TPath } from "./components/layout/navbar/navbar"
-import { IHomeButton } from "./components/common/home-button/home-button"
+import { INavbarButton } from "./components/common/navbar-button/navbar-button"
 
 @Component({
     selector: "app-root",
@@ -33,10 +32,11 @@ import { IHomeButton } from "./components/common/home-button/home-button"
 })
 export class AppComponent {
     navItems = signal<INavbarItems>(NAV_ITEMS)
-    routerSubscription: Subscription = new Subscription()
+
     router = inject(Router)
-    ngOnInit() {
-        this.routerSubscription = this.router.events.subscribe({
+
+    changeActiveButtonOnNavigationEnd: Subscription =
+        this.router.events.subscribe({
             next: (event) => {
                 if (event instanceof NavigationEnd) {
                     this.activateButtonCorrespondingToCurrentRoute(
@@ -45,15 +45,14 @@ export class AppComponent {
                 }
             },
         })
-    }
 
     ngOnDestroy() {
-        this.routerSubscription.unsubscribe()
+        this.changeActiveButtonOnNavigationEnd.unsubscribe()
     }
 
     activateButtonCorrespondingToCurrentRoute(path: TPath) {
         const updatedNavItems = this.navItems().map(
-            (navbarItem: IHomeButton) => {
+            (navbarItem: INavbarButton) => {
                 if (path === navbarItem.buttonNavigateTo) {
                     navbarItem.active = true
                 } else {
