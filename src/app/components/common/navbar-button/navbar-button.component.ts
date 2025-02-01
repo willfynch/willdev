@@ -6,12 +6,7 @@ import { HlmTooltipTriggerDirective } from "@spartan-ng/ui-tooltip-helm"
 
 @Component({
     selector: "app-navbar-button",
-    imports: [
-        HlmButtonDirective,
-        NgIcon,
-        HlmTooltipTriggerDirective,
-        RouterLink,
-    ],
+    imports: [HlmButtonDirective, NgIcon, HlmTooltipTriggerDirective, RouterLink],
     templateUrl: "./navbar-button.component.html",
     styleUrl: "./navbar-button.component.scss",
 })

@@ -14,15 +14,7 @@ export const personalProjects: PersonalProject[] = [
         description: "Site vitrine et éditorial - en cours",
         tasks: ["Maquettage", "Développement", "Mise en production"],
         url: "https://ducafeetducode.com",
-        technos: [
-            "NextJS",
-            "TinaCMS",
-            "TailwindCSS",
-            "TypeScript",
-            "Vercel",
-            "Figma",
-            "Hook Form",
-        ],
+        technos: ["NextJS", "TinaCMS", "TailwindCSS", "TypeScript", "Vercel", "Figma", "Hook Form"],
         image: "portfolio_ducafeetducode.webp",
     },
 ]

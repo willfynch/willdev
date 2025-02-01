@@ -2,13 +2,7 @@ import { Component } from "@angular/core"
 import { Contact } from "../../models/contact.model"
 import { EmailjsService } from "../../services/emailjs.service"
 import { CommonModule } from "@angular/common"
-import {
-    FormBuilder,
-    FormGroup,
-    FormsModule,
-    ReactiveFormsModule,
-    Validators,
-} from "@angular/forms"
+import { FormBuilder, FormGroup, FormsModule, ReactiveFormsModule, Validators } from "@angular/forms"
 @Component({
     selector: "app-contact",
     standalone: true,
@@ -32,10 +26,7 @@ export class ContactComponent {
     ) {
         this.contactForm = this.formBuilder.group({
             name: ["", Validators.required],
-            email: [
-                "",
-                Validators.compose([Validators.required, Validators.email]),
-            ],
+            email: ["", Validators.compose([Validators.required, Validators.email])],
             body: ["", Validators.required],
         })
     }
@@ -57,18 +48,8 @@ export class ContactComponent {
         this.resultEmailLoading = true
         this.emailJs
             .sendMail(payload)
-            .then(() =>
-                this.openSnackBar("Le mail a bien été envoyé !", "Fermer", [
-                    "success-snack",
-                ])
-            )
-            .catch((error) =>
-                this.openSnackBar(
-                    "Une erreur est survenue : " + error,
-                    "Fermer",
-                    ["error-snack"]
-                )
-            )
+            .then(() => this.openSnackBar("Le mail a bien été envoyé !", "Fermer", ["success-snack"]))
+            .catch((error) => this.openSnackBar("Une erreur est survenue : " + error, "Fermer", ["error-snack"]))
             .finally(() => (this.resultEmailLoading = false))
     }
 

@@ -81,3 +81,10 @@ body {
         @apply border-border;
     }
 }
+article {
+    
+}
+h2 {
+    font-weight: bold;
+    font-size: 1.1rem;
+}

@@ -1,11 +1,4 @@
-import {
-    Directive,
-    ElementRef,
-    HostBinding,
-    HostListener,
-    Inject,
-    Optional,
-} from "@angular/core"
+import { Directive, ElementRef, HostBinding, HostListener, Inject, Optional } from "@angular/core"
 import { DOCUMENT } from "@angular/common"
 @Directive({
     selector: "[appAddClassOnScroll]",
@@ -29,9 +22,6 @@ export class AddClassOnScrollDirective {
     }
 
     private isBrowser() {
-        return (
-            this.document !== undefined &&
-            this.document.defaultView !== undefined
-        )
+        return this.document !== undefined && this.document.defaultView !== undefined
     }
 }

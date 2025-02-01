@@ -22,10 +22,6 @@ export class EmailjsService {
     }
 
     sendMail(email: any): Promise<EmailJSResponseStatus> {
-        return emailjs.send(
-            environment.EMAILJS_SERVICE_ID,
-            environment.EMAILJS_TEMPLATE_ID,
-            email
-        )
+        return emailjs.send(environment.EMAILJS_SERVICE_ID, environment.EMAILJS_TEMPLATE_ID, email)
     }
 }

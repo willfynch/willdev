@@ -1,17 +1,17 @@
 import { ComponentFixture, TestBed } from "@angular/core/testing"
 
-import { PageContainer } from "./page.container"
+import { HeadTitleComponent } from "./head-title.component"
 
-describe("PageContainer", () => {
-    let component: PageContainer
-    let fixture: ComponentFixture<PageContainer>
+describe("HeadTitleComponent", () => {
+    let component: HeadTitleComponent
+    let fixture: ComponentFixture<HeadTitleComponent>
 
     beforeEach(async () => {
         await TestBed.configureTestingModule({
-            imports: [PageContainer],
+            imports: [HeadTitleComponent],
         }).compileComponents()
 
-        fixture = TestBed.createComponent(PageContainer)
+        fixture = TestBed.createComponent(HeadTitleComponent)
         component = fixture.componentInstance
         fixture.detectChanges()
     })
