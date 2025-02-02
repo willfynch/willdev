@@ -6,4 +6,5 @@ export const routes: Route[] = [
     { path: "", redirectTo: "home", pathMatch: "full" },
     { path: "home", component: HomePage },
     { path: "about", component: AboutPage },
+    {path: "**", redirectTo: "home"}
 ]
