@@ -1,10 +1,9 @@
 import { IExperience, ISideProject } from "./about";
 
 export enum ABOUT_CONTENT {
-    ABOUT_1 = `Hello, I'm Mark, a seasoned UI/UX Designer with 
-    over a decade of experience in shaping exceptional digital 
-    experiences. My dedication to my craft has led me to create
-    meticulously detailed user interfaces for a diverse range of devices.`,
+    ABOUT_1 = `Hello, I'm William, a seasoned Front-End Developer, using mostly Angular,
+    with more than 3 years of experience in building solid and performant web apps. 
+    I believe in software craftmanship and I am building my path accordingly.`,
     ABOUT_2 = `Throughout my career, I've been driven by a passion for combining 
     aesthetics and functionality to craft user interfaces that not only look great 
     but also provide intuitive and seamless interactions. `,
@@ -27,7 +26,7 @@ export const EXPERIENCES: IExperience[] = [
         startDate: 2022,
         endDate: "Now",
         jobTitle: "Angular Developer",
-        company: "Société Générale",
+        company: "Société Générale, Paris",
         description: `
         Building and maintaining web portals used by hundreds 
         of network operators.`,
@@ -39,13 +38,11 @@ export const SIDE_PROJECTS: ISideProject[] = [
     {
         year: 2024,
         finished: true,
-        name: "Web library for self-published authors",
+        name: "Self-published authors' library",
         description: `Website for browsing self-published books and
-        articles about self-publishing and creativity. Users can submit books 
-        or articles using Tally forms. Website is built only once, using
-        NextJS static generation.`,
-        stack: ["NextJS", "DaisyUI", "Tally", "Vercel"],
+        articles about self-publishing and creativity.`,
+        stack: ["Next.js", "DaisyUI", "Tally", "Vercel"],
         link: "https://la-librairie-des-autoedites.ducafeetdesrimes.com/",
-        imagePath: ""
+        imagePath: "librairie-des-auto-edites.webp"
     }
 ]

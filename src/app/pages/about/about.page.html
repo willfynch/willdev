@@ -2,11 +2,16 @@
 <app-profile-card [page]="'about'"></app-profile-card>
 <section class="article-container">
     <h2 class="article-h2">About</h2>
-    <p class="article-paragraph">{{aboutText1}}</p>
-    <p class="article-paragraph">{{aboutText2}}</p>
+        <p class="article-paragraph">{{aboutText1}}</p>
+        <p class="article-paragraph">{{aboutText2}}</p>
     <h2 class="article-h2">Experience</h2>
-    @for(experience of experiences; track experience.id){
-        <app-experience-item class="cursor-pointer" hlmBtn size="nolimit" variant="ghost" [experienceItem]="experience"></app-experience-item>
-    }
+    <div class="flex flex-col gap-2">
+        @for(experience of experiences; track experience.id){
+            <app-experience-item [experienceItem]="experience" class="cursor-pointer" hlmBtn size="nolimit" variant="ghost" ></app-experience-item>
+        }
+    </div>
     <h2 class="article-h2">Side projects</h2>
+    @for(sideProject of sideProjects; track sideProject.name){
+        <app-side-project-item [sideProjectItem]="sideProject" class="cursor-pointer" hlmBtn size="nolimit" variant="ghost"></app-side-project-item>
+    }
 </section>

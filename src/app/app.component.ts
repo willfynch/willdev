@@ -2,7 +2,7 @@ import { CommonModule } from "@angular/common"
 import { Component, inject, signal } from "@angular/core"
 import { NavigationEnd, Router, RouterOutlet } from "@angular/router"
 import { provideIcons } from "@ng-icons/core"
-import { lucideBriefcaseBusiness, lucideHouse, lucideMail, lucideUser } from "@ng-icons/lucide"
+import { lucideArrowUpRight, lucideBriefcaseBusiness, lucideHouse, lucideMail, lucideUser } from "@ng-icons/lucide"
 
 import { NavbarComponent } from "./components/layout/navbar/navbar.component"
 import { NAV_ITEMS } from "./utilities/constants/navitems.const"
@@ -21,6 +21,7 @@ import { TPath } from "./utilities/common-types/paths"
             lucideBriefcaseBusiness,
             lucideMail,
             lucideHouse,
+            lucideArrowUpRight
         }),
     ],
     templateUrl: "./app.component.html",
