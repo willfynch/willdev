@@ -1,0 +1,25 @@
+<div hlmCard class="p-4">
+    <form class="flex flex-col justify-center gap-2" [formGroup]="contactForm" hlmCardContent>
+         
+    <hlm-form-field>
+        <label for="name">Name</label>
+        <input id="name" formControlName="name" class="w-full bg-[#F8F8F8]" hlmInput type="text" placeholder="Name" />
+        <hlm-error>Your name is required</hlm-error>
+    </hlm-form-field>
+    <hlm-form-field>
+        <label for="email">Email</label>
+        <input  id="email" formControlName="email" class="w-full bg-[#F8F8F8]" hlmInput type="email" placeholder="Email" />
+        <hlm-error>Type a valid email</hlm-error>
+    </hlm-form-field>
+
+    <hlm-form-field>
+        <label for="message">Message</label>
+        <textarea class="min-h-[80px] w-full bg-[#F8F8F8]" hlmInput placeholder="Type your message here."></textarea>
+    </hlm-form-field>
+
+    <button hlmBtn variant="outline">
+        Send the message
+    </button>
+
+    </form>
+</div>

@@ -26,14 +26,17 @@
     <div hlmCardContent>
         <brn-separator class="my-4" hlmSeparator></brn-separator>
         <p class="text-sm text-black/50">{{BIO}}</p>
-        <brn-separator class="my-4" hlmSeparator></brn-separator>
-        <div class="block">
-          <a class="my-0 mx-auto" [routerLink]="['/contact']"  hlmBtn variant='secondary'> 
-            <ng-icon class="mr-2" name="lucideCopy"/> 
-            Download resume</a>
-        </div>
-    </div>
-    }
-   
 
+    </div>
+  }
+
+  <div hlmCardContent>
+    <brn-separator class="my-4" hlmSeparator></brn-separator>
+    <div class="flex justify-center">
+      <a href=""  hlmBtn variant='secondary'> 
+        <ng-icon class="mr-2" name="lucideDownload"/> 
+        Download resume
+      </a>
+    </div>
+  </div>
 </section>

@@ -1,1 +1,1 @@
-export type THeadTitle = "Portfolio" | "Get in touch";
+export type THeadTitle = "Portfolio." | "Get in touch.";

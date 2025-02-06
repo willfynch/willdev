@@ -2,13 +2,12 @@ import { CommonModule } from "@angular/common"
 import { Component, inject, signal } from "@angular/core"
 import { NavigationEnd, Router, RouterOutlet } from "@angular/router"
 import { provideIcons } from "@ng-icons/core"
-import { lucideArrowUpRight, lucideBriefcaseBusiness, lucideHouse, lucideMail, lucideUser } from "@ng-icons/lucide"
+import { lucideArrowUpRight, lucideBriefcaseBusiness, lucideDownload, lucideGithub, lucideHouse, lucideLinkedin, lucideMail, lucideUser } from "@ng-icons/lucide"
 
 import { NavbarComponent } from "./components/layout/navbar/navbar.component"
 import { NAV_ITEMS } from "./utilities/constants/navitems.const"
 import { Subscription } from "rxjs"
-import { INavbarItems } from "./components/layout/navbar/navbar"
-import { INavbarButton } from "./components/common/navbar-button/navbar-button"
+import { INavbarButton, INavbarItems } from "./components/layout/navbar/navbar"
 import { TPath } from "./utilities/common-types/paths"
 
 @Component({
@@ -21,7 +20,10 @@ import { TPath } from "./utilities/common-types/paths"
             lucideBriefcaseBusiness,
             lucideMail,
             lucideHouse,
-            lucideArrowUpRight
+            lucideArrowUpRight,
+            lucideDownload,
+            lucideLinkedin,
+            lucideGithub
         }),
     ],
     templateUrl: "./app.component.html",

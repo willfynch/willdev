@@ -44,11 +44,11 @@ export class HeadTitleComponent {
     private setTitle(): THeadTitle {
         switch (this.page()) {
             case "/portfolio":
-                return "Portfolio"
+                return "Portfolio."
             case "/contact":
-                return "Get in touch"
+                return "Get in touch."
             default:
-                return "Portfolio"
+                return "Portfolio."
         }
     }
 }
