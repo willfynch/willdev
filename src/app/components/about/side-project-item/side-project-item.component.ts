@@ -1,4 +1,4 @@
-import { Component, input } from '@angular/core';
+import { Component, input, InputSignal } from '@angular/core';
 import { ISideProject } from '../../../pages/about/about';
 import { NgIcon } from '@ng-icons/core';
 
@@ -9,5 +9,5 @@ import { NgIcon } from '@ng-icons/core';
   styleUrl: './side-project-item.component.scss'
 })
 export class SideProjectItemComponent {
-  sideProjectItem = input<ISideProject>()
+  public sideProjectItem: InputSignal<ISideProject> = input.required<ISideProject>()
 }

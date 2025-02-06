@@ -1,4 +1,4 @@
-import { Component, input, signal } from "@angular/core"
+import { Component, input, InputSignal, signal, WritableSignal } from "@angular/core"
 import { HlmCardContentDirective, HlmCardDirective } from "@spartan-ng/ui-card-helm"
 import { HlmAvatarImageDirective, HlmAvatarComponent, HlmAvatarFallbackDirective } from "@spartan-ng/ui-avatar-helm"
 import { HlmButtonDirective } from "@spartan-ng/ui-button-helm"
@@ -31,11 +31,11 @@ import { TProfileCardPath } from "./profile-card"
     styleUrl: "./profile-card.component.scss",
 })
 export class ProfileCardComponent {
-    BIO = PROFILE_CARD_CONTENT.BIO
-    copyEmailText = signal<string>("Email")
-    page = input<TProfileCardPath>()
+    protected BIO = PROFILE_CARD_CONTENT.BIO
+    protected copyEmailText: WritableSignal<string> = signal<string>("Email")
+    public page: InputSignal<TProfileCardPath> = input.required<TProfileCardPath>()
 
-    copyEmail() {
+    protected copyEmail() : void {
         this.copyEmailText.set("Copied !")
         navigator.clipboard.writeText(CONTACT.EMAIL)
         setTimeout(() => {

@@ -1,4 +1,4 @@
-import { IExperience, ISideProject } from "./about";
+import { IExperience, IReview, ISideProject } from "./about"
 
 export enum ABOUT_CONTENT {
     ABOUT_1 = `Hello, I'm William, a seasoned Front-End Developer, using mostly Angular,
@@ -20,7 +20,7 @@ export const EXPERIENCES: IExperience[] = [
         Indarra. Built forms using Angular and NodeJS, used Terraform to
         set up a staging environment and delivered a fully functional 
         website with Angular / Scully and headless CMS Strapi.`,
-        id: 0
+        id: 0,
     },
     {
         startDate: 2022,
@@ -28,9 +28,9 @@ export const EXPERIENCES: IExperience[] = [
         jobTitle: "Angular Developer",
         company: "Société Générale, Paris",
         description: `
-        Building and maintaining web portals used by hundreds 
+        Building and maintaining web applications used by hundreds 
         of network operators.`,
-        id: 1
+        id: 1,
     },
 ]
 
@@ -43,6 +43,30 @@ export const SIDE_PROJECTS: ISideProject[] = [
         articles about self-publishing and creativity.`,
         stack: ["Next.js", "DaisyUI", "Tally", "Vercel"],
         link: "https://la-librairie-des-autoedites.ducafeetdesrimes.com/",
-        imagePath: "librairie-des-auto-edites.webp"
-    }
+        imagePath: "librairie-des-auto-edites.webp",
+    },
+]
+
+export const REVIEWS: IReview[] = [
+    {
+        review: `William has been working as a front end 
+        developer at SG for many years now. Having worked 
+        with him on many projects, and he always goes the extra mile 
+        to ensure the company standards and client requirements are met.`,
+        reviewerName: "Abdesslem AMRI",
+        reviewerTitle: "Senior Python developer at Société Générale",
+        reviewerAvatar: "",
+        reviewerAvatarPlaceholder: "AM",
+        reviewerLinkedInProfile: "https://www.linkedin.com/in/abdesslem-amri"
+    },
+    {
+        review: `Working with William has been a great human and professional experience.
+        Driven and meticulous, he pays attention to details. I recommand working
+        with him.`,
+        reviewerName: "Arnaud GUETIN",
+        reviewerTitle: "Senior Angular developer at Société Générale",
+        reviewerAvatar: "",
+        reviewerAvatarPlaceholder: "",
+        reviewerLinkedInProfile: "https://www.linkedin.com/in/arnaud-guetin/"
+    },
 ]

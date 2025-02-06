@@ -1,8 +1,9 @@
-import { Component, input } from "@angular/core"
+import { Component, input, InputSignal } from "@angular/core"
 import { RouterLink } from "@angular/router"
 import { IconType, NgIcon } from "@ng-icons/core"
 import { HlmButtonDirective } from "@spartan-ng/ui-button-helm"
 import { HlmTooltipTriggerDirective } from "@spartan-ng/ui-tooltip-helm"
+import { TPath } from "../../../utilities/common-types/paths"
 
 @Component({
     selector: "app-navbar-button",
@@ -11,8 +12,8 @@ import { HlmTooltipTriggerDirective } from "@spartan-ng/ui-tooltip-helm"
     styleUrl: "./navbar-button.component.scss",
 })
 export class NavbarButtonComponent {
-    iconName = input<IconType | undefined>()
-    buttonNavigateTo = input<string>()
-    toolTip = input<string>()
-    active = input<boolean>()
+    public iconName: InputSignal<IconType | undefined> = input.required<IconType | undefined>()
+    public linkPath: InputSignal<TPath> = input.required<TPath>()
+    public toolTipContent: InputSignal<string> = input.required<string>()
+    public active: InputSignal<boolean> = input.required<boolean>()
 }

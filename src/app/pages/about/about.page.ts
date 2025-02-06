@@ -1,10 +1,11 @@
 import { Component } from "@angular/core"
 import { ProfileCardComponent } from "../../components/common/profile-card/profile-card.component"
 import { HeadTitleComponent } from "../../components/common/head-title/head-title.component"
-import { ABOUT_CONTENT, EXPERIENCES, SIDE_PROJECTS } from "./about.content"
+import { ABOUT_CONTENT, EXPERIENCES, REVIEWS, SIDE_PROJECTS } from "./about.content"
 import { ExperienceItemComponent } from "../../components/about/experience-item/experience-item.component"
 import { HlmButtonDirective } from "@spartan-ng/ui-button-helm"
 import { SideProjectItemComponent } from "../../components/about/side-project-item/side-project-item.component"
+import { ReviewItemComponent } from "../../components/about/review-item/review-item.component"
 
 @Component({
     selector: "app-about",
@@ -13,7 +14,8 @@ import { SideProjectItemComponent } from "../../components/about/side-project-it
         ExperienceItemComponent,
         HeadTitleComponent,
         HlmButtonDirective,
-        SideProjectItemComponent
+        SideProjectItemComponent,
+        ReviewItemComponent
     ],
     templateUrl: "./about.page.html",
     styleUrl: "./about.page.scss",
@@ -24,4 +26,6 @@ export class AboutPage {
 
     experiences = EXPERIENCES.sort((a,b)=>b.id-a.id);
     sideProjects = SIDE_PROJECTS;
+
+    reviews = REVIEWS;
 }

@@ -1,5 +1,5 @@
 <app-head-title [page]="'/about'"></app-head-title>
-<app-profile-card [page]="'about'"></app-profile-card>
+<app-profile-card [page]="'/about'"></app-profile-card>
 <section class="article-container">
     <h2 class="article-h2">About</h2>
         <p class="article-paragraph">{{aboutText1}}</p>
@@ -14,4 +14,23 @@
     @for(sideProject of sideProjects; track sideProject.name){
         <app-side-project-item [sideProjectItem]="sideProject" class="cursor-pointer" hlmBtn size="nolimit" variant="ghost"></app-side-project-item>
     }
+    <h2 class="article-h2">What they say</h2>
+
+
+    <div class="slider-container flex">
+
+        <div class="slider-list slider-list-1">
+            
+            @for(review of reviews; track review.review){
+
+                <app-review-item [review]="review"></app-review-item>
+            }
+        </div>
+        <div class="slider-list slider-list-2">
+            @for(review of reviews; track review.review){
+                <app-review-item [review]="review"></app-review-item>
+            }
+        </div>
+    </div>
+    
 </section>

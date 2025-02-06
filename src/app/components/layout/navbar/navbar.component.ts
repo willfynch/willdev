@@ -1,4 +1,4 @@
-import { Component, input } from "@angular/core"
+import { Component, input, InputSignal } from "@angular/core"
 import { CommonModule } from "@angular/common"
 import { INavbarItems } from "./navbar"
 import { NavbarButtonComponent } from "../../common/navbar-button/navbar-button.component"
@@ -11,5 +11,5 @@ import { NavbarButtonComponent } from "../../common/navbar-button/navbar-button.
     styleUrl: "./navbar.component.scss",
 })
 export class NavbarComponent {
-    navItems = input<INavbarItems>()
+    navItems: InputSignal<INavbarItems> = input.required<INavbarItems>()
 }

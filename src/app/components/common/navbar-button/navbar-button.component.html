@@ -1,8 +1,8 @@
 <a
-  [hlmTooltipTrigger]="toolTip()!"
-  [routerLink]="buttonNavigateTo()"
+  [hlmTooltipTrigger]="toolTipContent()!"
+  [routerLink]="linkPath()"
   hlmBtn
-  [aria-describedby]="toolTip()!"
+  [aria-describedby]="toolTipContent()!"
   [class.bg-accent]="active()"
   class="group w-12 h-12 rounded-full! hover:scale-110 !duration-600 home-button"
   variant="outline"

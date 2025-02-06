@@ -3,7 +3,7 @@ import { TPath } from "../../layout/navbar/navbar"
 
 export interface INavbarButton {
     iconName: IconType
-    buttonNavigateTo: TPath
+    linkPath: TPath
     toolTip: string
     id: number
     active: boolean

@@ -19,3 +19,15 @@ export interface ISideProject {
     link: string
     imagePath: "librairie-des-auto-edites.webp"
 }
+
+export interface IReview {
+    review: string;
+    reviewerName: string;
+    reviewerTitle: string;
+    reviewerLinkedInProfile: string;
+    reviewerAvatar: string;
+    reviewerAvatarPlaceholder: string;
+}
+
+
+

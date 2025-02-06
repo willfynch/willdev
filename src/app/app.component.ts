@@ -46,7 +46,7 @@ export class AppComponent {
 
     activateButtonCorrespondingToCurrentRoute(path: TPath) {
         const updatedNavItems = this.navItems().map((navbarItem: INavbarButton) => {
-            if (path === navbarItem.buttonNavigateTo) {
+            if (path === navbarItem.linkPath) {
                 navbarItem.active = true
             } else {
                 navbarItem.active = false

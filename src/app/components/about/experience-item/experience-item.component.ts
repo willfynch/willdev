@@ -1,4 +1,4 @@
-import { Component, input } from '@angular/core';
+import { Component, input, InputSignal } from '@angular/core';
 import { IExperience } from '../../../pages/about/about';
 
 @Component({
@@ -9,6 +9,6 @@ import { IExperience } from '../../../pages/about/about';
 })
 export class ExperienceItemComponent {
 
-  experienceItem = input<IExperience>()
+  public experienceItem: InputSignal<IExperience> = input.required<IExperience>()
 
 }

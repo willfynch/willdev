@@ -1,7 +1,7 @@
-import { Component, computed, input, signal } from "@angular/core"
+import { Component, computed, input, InputSignal, Signal, signal, WritableSignal } from "@angular/core"
 import { TPath } from "../../../utilities/common-types/paths"
 import { THeadTitle } from "./head-title"
-import { interval } from "rxjs"
+import { interval, Subscription } from "rxjs"
 import { NgStyle } from "@angular/common"
 
 @Component({
@@ -11,13 +11,18 @@ import { NgStyle } from "@angular/common"
     styleUrl: "./head-title.component.scss",
 })
 export class HeadTitleComponent {
-    public hellos: string[] = ["Hello.", "Ciao.", "Bonjour.", "Olà."]
-    translationValue = signal(0)
-    translatedStyle = computed(() => {
+    
+    public hellos: string[] = ["Hello.", "Ciao.", "Bonjour.", "Olà."];
+    public page: InputSignal<TPath> = input.required<TPath>()
+    public translatedStyle: Signal<Record<string, string>> = computed(() => {
         return {'transform': `translateY(${-this.translationValue()}px)`}
     })
 
-    helloIntervalSubscription = interval(2000).subscribe({
+    protected isHelloArrayUsed: Signal<boolean> = computed<boolean>(() => this.checkIfHelloArrayUsed())
+    protected title: Signal<THeadTitle> = computed<THeadTitle>(() => this.setTitle())
+    
+    private translationValue: WritableSignal<number> = signal(0)
+    private helloIntervalSubscription: Subscription = interval(2000).subscribe({
         next: () => {
             if (this.translationValue() === 162) {
                 this.translationValue.set(0)
@@ -28,23 +33,15 @@ export class HeadTitleComponent {
         error: (error) => console.log(error),
     })
 
-    page = input<TPath>()
-    isHelloArrayUsed = computed<boolean>(() => this.checkIfHelloArrayUsed())
-    title = computed<THeadTitle>(() => this.setTitle())
-
-    ngOnDestroy() {
+    ngOnDestroy(): void {
         this.helloIntervalSubscription.unsubscribe()
     }
 
-    checkIfHelloArrayUsed() {
-        if (this.page() === "/about" || this.page() === "/home") {
-            return true
-        } else {
-            return false
-        }
+    private checkIfHelloArrayUsed(): boolean {
+        return (["/home", "/about"] as Array<TPath>).includes(this.page()) 
     }
 
-    setTitle(): THeadTitle {
+    private setTitle(): THeadTitle {
         switch (this.page()) {
             case "/portfolio":
                 return "Portfolio"
