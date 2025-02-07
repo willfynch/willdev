@@ -16,9 +16,9 @@
     </div>
     <div class="flex gap-2">
         <a [routerLink]="['/contact']"  hlmBtn variant='secondary'>Contact</a>
-        <button hlmBtn variant="outline" (click)="copyEmail()">
+        <button hlmBtn variant="outline" (click)="copyEmailService.copyEmail()">
             <ng-icon class="mr-2" name="lucideCopy"/>
-            {{copyEmailText()}}
+            {{copyEmailService.copyEmailText()}}
         </button>
     </div>
   </div>

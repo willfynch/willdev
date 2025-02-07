@@ -4,11 +4,11 @@ export const SOCIALS: TSocialNetwork[] = [
     {
         name: "LinkedIn",
         icon: "lucideLinkedin",
-        link: "",
+        link: "https://www.linkedin.com/in/williamfinzy/",
     },
     {
         icon: "lucideGithub",
         name: "GitHub",
-        link: "",
+        link: "https://github.com/willfynch",
     },
 ]

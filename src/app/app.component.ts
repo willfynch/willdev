@@ -1,18 +1,18 @@
 import { CommonModule } from "@angular/common"
-import { Component, inject, signal } from "@angular/core"
+import { Component, inject, signal, WritableSignal } from "@angular/core"
 import { NavigationEnd, Router, RouterOutlet } from "@angular/router"
 import { provideIcons } from "@ng-icons/core"
-import { lucideArrowUpRight, lucideBriefcaseBusiness, lucideDownload, lucideGithub, lucideHouse, lucideLinkedin, lucideMail, lucideUser } from "@ng-icons/lucide"
-
+import { lucideArrowUpRight, lucideBriefcaseBusiness, lucideCopy, lucideDownload, lucideGithub, lucideHouse, lucideLinkedin, lucideMail, lucideUser } from "@ng-icons/lucide"
 import { NavbarComponent } from "./components/layout/navbar/navbar.component"
 import { NAV_ITEMS } from "./utilities/constants/navitems.const"
 import { Subscription } from "rxjs"
 import { INavbarButton, INavbarItems } from "./components/layout/navbar/navbar"
 import { TPath } from "./utilities/common-types/paths"
+import { FooterComponent } from "./components/layout/footer/footer.component"
 
 @Component({
     selector: "app-root",
-    imports: [CommonModule, RouterOutlet, NavbarComponent],
+    imports: [CommonModule, RouterOutlet, NavbarComponent, FooterComponent],
     standalone: true,
     providers: [
         provideIcons({
@@ -23,14 +23,16 @@ import { TPath } from "./utilities/common-types/paths"
             lucideArrowUpRight,
             lucideDownload,
             lucideLinkedin,
-            lucideGithub
+            lucideGithub,
+            lucideCopy
         }),
     ],
     templateUrl: "./app.component.html",
     styleUrl: "./app.component.scss",
 })
 export class AppComponent {
-    navItems = signal<INavbarItems>(NAV_ITEMS)
+    protected navItems: WritableSignal<INavbarItems> = signal<INavbarItems>(NAV_ITEMS)
+    
 
     router = inject(Router)
 
@@ -57,4 +59,6 @@ export class AppComponent {
         })
         this.navItems.set(updatedNavItems)
     }
+
+
 }

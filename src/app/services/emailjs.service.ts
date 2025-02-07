@@ -1,13 +1,21 @@
-import { Injectable } from "@angular/core"
-import { Email } from "../models/email.model"
+import { inject, Injectable } from "@angular/core"
 import emailjs, { EmailJSResponseStatus } from "@emailjs/browser"
 import { environment } from "../../environments/environment"
-import { env } from "process"
+import { TContactFormData } from "../pages/contact/contact"
+import { from, Observable, Subscription } from "rxjs"
+import { ToasterService } from "./toaster.service"
+import { TToast } from "../utilities/common-types/toast"
+import { HttpClient } from "@angular/common/http"
+
 
 @Injectable({
     providedIn: "root",
 })
 export class EmailjsService {
+    private http = inject(HttpClient);
+
+
+
     constructor() {
         emailjs.init({
             publicKey: environment.EMAILJS_PUBLIC_KEY,
@@ -21,7 +29,10 @@ export class EmailjsService {
         })
     }
 
-    sendMail(email: any): Promise<EmailJSResponseStatus> {
-        return emailjs.send(environment.EMAILJS_SERVICE_ID, environment.EMAILJS_TEMPLATE_ID, email)
+
+
+    createEmail(email: TContactFormData): Observable<EmailJSResponseStatus> {
+        return this.http.get<EmailJSResponseStatus>("https://603a6db0f1d6aa0017a109c2.mockapi.io/api/:endpoint");
+        return from(emailjs.send(environment.EMAILJS_SERVICE_ID, environment.EMAILJS_TEMPLATE_ID, email))
     }
 }

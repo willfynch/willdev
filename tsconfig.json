@@ -46,6 +46,9 @@
       ],
       "@spartan-ng/ui-input-helm": [
         ".\\libs/ui/ui-input-helm/src/index.ts"
+      ],
+      "@spartan-ng/ui-sonner-helm": [
+        ".\\libs/ui/ui-sonner-helm/src/index.ts"
       ]
     }
   },
