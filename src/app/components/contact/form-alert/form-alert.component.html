@@ -1,0 +1,18 @@
+<div hlmAlert [@fadeSlideInOut] [class]="alertClass()">
+    @if(emailAlertStatus() === 'success') {
+        <ng-icon hlmAlertIcon name="lucideMailCheck" />
+        <h4 class="text-green-600" hlmAlertTitle>Success !</h4>
+        <p class="text-green-600" hlmAlertDesc>Message sent !</p>
+    }
+    @if(emailAlertStatus() === 'error') {
+        <ng-icon class="text-red-500 stroke-2" hlmAlertIcon name="lucideMailX" />
+        <h4 class="text-red-600" hlmAlertTitle>Unexpected Error</h4>
+        <p class="text-red-600" hlmAlertDesc>An error occurred, please retry later.</p>
+    }
+    @if(emailAlertStatus() === 'pending') {
+        <hlm-spinner size="xs" hlmAlertIcon />
+        <h4 class="text-blue-600" hlmAlertTitle>Info.</h4>
+        <p class="text-blue-600" hlmAlertDesc>Sending message...</p>
+    }
+    
+  </div>

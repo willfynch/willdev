@@ -1,25 +1,27 @@
 <h2 class="article-h2">Send me a message</h2>
 <div hlmCard class="p-4">
-    <form class="flex flex-col justify-center gap-2" [formGroup]="contactForm()" hlmCardContent>
+    <form class="py-4 py-8 flex flex-col justify-center gap-2" [formGroup]="contactForm()" hlmCardContent>
          
     <hlm-form-field>
-        <!-- <label for="name">Name</label> -->
         <input id="name" formControlName="name" class="w-full bg-[#F8F8F8]" hlmInput type="text" placeholder="Name" />
         <hlm-error>Your name is required.</hlm-error>
     </hlm-form-field>
     <hlm-form-field>
-        <!-- <label for="email">Email</label> -->
         <input  id="email" formControlName="email" class="w-full bg-[#F8F8F8]" hlmInput type="email" placeholder="Email" />
         <hlm-error>Type a valid email.</hlm-error>
     </hlm-form-field>
 
     <hlm-form-field>
-        <!-- <label for="message">Message</label> -->
         <textarea formControlName="message" class="min-h-[80px] w-full bg-[#F8F8F8]" hlmInput placeholder="Type your message here."></textarea>
         <hlm-error>Type a message.</hlm-error>
     </hlm-form-field>
 
-    <button (click)="onSendMessage.emit()" hlmBtn variant="outline">
+    @if(emailAlertStatus()!=='hidden') {
+        <app-form-alert [emailAlertStatus]="emailAlertStatus()"></app-form-alert>
+
+    }
+
+    <button [disabled]="contactForm().invalid || emailAlertStatus()!=='hidden'" (click)="onSendMessage.emit()" hlmBtn variant="outline">
         Send the message
     </button>
 

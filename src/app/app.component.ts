@@ -2,7 +2,19 @@ import { CommonModule } from "@angular/common"
 import { Component, inject, signal, WritableSignal } from "@angular/core"
 import { NavigationEnd, Router, RouterOutlet } from "@angular/router"
 import { provideIcons } from "@ng-icons/core"
-import { lucideArrowUpRight, lucideBriefcaseBusiness, lucideCopy, lucideDownload, lucideGithub, lucideHouse, lucideLinkedin, lucideMail, lucideUser } from "@ng-icons/lucide"
+import {
+    lucideArrowUpRight,
+    lucideBriefcaseBusiness,
+    lucideCopy,
+    lucideDownload,
+    lucideGithub,
+    lucideHouse,
+    lucideLinkedin,
+    lucideMail,
+    lucideMailCheck,
+    lucideMailX,
+    lucideUser,
+} from "@ng-icons/lucide"
 import { NavbarComponent } from "./components/layout/navbar/navbar.component"
 import { NAV_ITEMS } from "./utilities/constants/navitems.const"
 import { Subscription } from "rxjs"
@@ -24,7 +36,9 @@ import { FooterComponent } from "./components/layout/footer/footer.component"
             lucideDownload,
             lucideLinkedin,
             lucideGithub,
-            lucideCopy
+            lucideCopy,
+            lucideMailX,
+            lucideMailCheck
         }),
     ],
     templateUrl: "./app.component.html",
@@ -32,9 +46,8 @@ import { FooterComponent } from "./components/layout/footer/footer.component"
 })
 export class AppComponent {
     protected navItems: WritableSignal<INavbarItems> = signal<INavbarItems>(NAV_ITEMS)
-    
 
-    router = inject(Router)
+    private router = inject(Router)
 
     changeActiveButtonOnNavigationEnd: Subscription = this.router.events.subscribe({
         next: (event) => {
@@ -59,6 +72,4 @@ export class AppComponent {
         })
         this.navItems.set(updatedNavItems)
     }
-
-
 }

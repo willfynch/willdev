@@ -1,5 +1,5 @@
 import { CommonModule } from "@angular/common"
-import { Component, inject } from "@angular/core"
+import { Component } from "@angular/core"
 
 @Component({
     selector: "app-footer",
@@ -11,4 +11,5 @@ import { Component, inject } from "@angular/core"
 export class FooterComponent {
     currentRoute: string | undefined = ""
     currentDate = new Date().getFullYear()
+
 }
