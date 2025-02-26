@@ -71,4 +71,25 @@ export const REVIEWS: IReview[] = [
         reviewerAvatarPlaceholder: "",
         reviewerLinkedInProfile: "https://www.linkedin.com/in/arnaud-guetin/",
     },
+    {
+        review: `William has relational and technical abilities
+        that allow him to join any project team. I recommend him.`,
+        reviewerName: "Ahmed CHOUAF",
+        reviewerTitle: "Product Owner at Société Générale",
+        reviewerLinkedInProfile: "https://www.linkedin.com/in/ahmed-chouaf-42984283",
+        reviewerAvatar: "",
+        reviewerAvatarPlaceholder: "",
+    },
+    {
+        review: `I worked with William on a microservices project. 
+        He was working on the Angular front-end. 
+William is very curious and diligent in his work.
+It was a pleasure to work with him on the same project, and 
+the teamwork went very well.`,
+        reviewerName: "Robin LANGLOIS",
+        reviewerTitle: "Python developer at Société Générale",
+        reviewerLinkedInProfile: "https://www.linkedin.com/in/robin-langlois",
+        reviewerAvatar: "",
+        reviewerAvatarPlaceholder: "",
+    },
 ]

@@ -1,18 +1,18 @@
 <app-head-title></app-head-title>
 <app-profile-card [page]="'/home'"></app-profile-card>
 <section class="my-4">
-    <h2 class="article-h2 font-bold text-primary">🗃️ Recent works</h2>
+    <h2 class="article-h2 ">🗃️ Recent works</h2>
     <div class="flex flex-col gap-2">
         @for(work of recentWorks; track work.name; let i = $index){
-            <div  appFadeIn [delay]="$index/5 + .5">
+            <div appFadeIn [delay]="$index/5 + .5">
                 <app-recent-works [work]="work"/>
             </div>
         }
     </div>
 </section>
 <section class="my-4">
-    <h2 class="article-h2 font-bold text-primary">📰 Recent articles</h2>
+    <h2 class="article-h2">📰 Recent articles</h2>
     <div class="flex flex-col justify-center items-center gap-2">
-        <p class="text-primary text-sm py-6">🏗️ This section is under construction folks !</p>
+        <p class="text-primary py-6">🏗️ This section is under construction folks !</p>
     </div>
 </section>

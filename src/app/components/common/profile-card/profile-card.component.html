@@ -4,13 +4,13 @@
             <hlm-avatar>
                 <img
                     src="/assets/images/profile_pic.webp"
-                    alt="spartan logo. Resembling a spartanic shield"
+                    alt="Picture of me"
                     hlmAvatarImage />
                 <span class="text-white bg-destructive" hlmAvatarFallback>WF</span>
             </hlm-avatar>
-            <div class="text-sm">
+            <div>
                 <p class="font-bold">William Finzy</p>
-                <p class="text-black/50">Front-End Developer</p>
+                <p class="text-primary">Front-End Developer</p>
             </div>
         </div>
         <div class="flex gap-2">
@@ -24,9 +24,9 @@
     @if (page() === "/home") {
         <div hlmCardContent>
             <brn-separator class="my-4" hlmSeparator></brn-separator>
-            <p class="text-sm text-primary">{{ BIO }}</p>
+            <p class="text-primary">{{ BIO }}</p>
             <div>
-                <h3 class="text-primary text-sm mb-2 mt-6">🛠️ Main tools</h3>
+                <h3 class="text-primary mb-2 mt-6">🛠️ Main tools</h3>
                 <div class="flex flex-wrap gap-2">
                     @for(techno of TECHNOS; track techno){
                         <span variant="blue" hlmBadge>{{techno}}</span>

@@ -1,7 +1,7 @@
 <section
     hlmCard
     type="light"
-    class="overflow-hidden group flex justify-center flex-col duration-700 relative">
+    class="overflow-hidden group flex justify-center flex-col duration-700 relative h-40 md:h-28">
     <div
         hlmCardContent
         class="flex justify-between items-center gap-4 !pt-6 flex-wrap group-hover:-translate-y-20 group-hover:opacity-0 duration-700">
@@ -9,7 +9,7 @@
             @if (work().logo) {
                 <img width="30" height="30" class="rounded-lg" [ngSrc]="work().logo!" />
             }
-            <div class="text-sm">
+            <div>
                 @if (work().link.external) {
                     <a
                         target="_blank"
@@ -29,7 +29,7 @@
         </div>
     </div>
     <div
-        class="rounded-lg overflow-hidden w-full duration-700 bottom-0 h-full translate-y-[160px] group-hover:translate-y-0 absolute">
+        class="rounded-lg overflow-hidden w-full duration-700 bottom-0 h-full translate-y-[200px] group-hover:translate-y-0 absolute">
         <div class="relative h-full">
             <div
                 class="absolute w-full h-full px-6 flex justify-center items-center z-[999] backdrop-brightness-[.4]">
