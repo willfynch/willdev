@@ -1,5 +1,5 @@
-const fs = require('fs');
-require('dotenv').config();
+const fs = require("fs")
+require("dotenv").config()
 
 const content = `
 export const environment = {
@@ -9,12 +9,12 @@ export const environment = {
     EMAILJS_SERVICE_ID: "${process.env.EMAILJS_SERVICE_ID}",
     EMAILJS_TEMPLATE_ID: "${process.env.EMAILJS_TEMPLATE_ID}"
 }
-`;
+`
 
-fs.writeFile('src/environments/environment.ts', content, (err) => {
-  if (err) {
-    console.error('Error writing to file:', err);
-    return;
-  }
-  console.log('File written successfully!');
-});
+fs.writeFile("src/environments/environment.ts", content, (err) => {
+    if (err) {
+        console.error("Error writing to file:", err)
+        return
+    }
+    console.log(`File written successfully!`)
+})

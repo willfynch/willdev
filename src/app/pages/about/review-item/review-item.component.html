@@ -1,0 +1,13 @@
+<section hlmCard class="text-sm">
+    <p hlmCardContent class="card-content p-4 h-32 text-primary">"{{ review().review }}"</p>
+    <div
+        class="card-footer p-4 flex flex-col justify-center items-start bg-primary-foreground border-t-[1px] border-border">
+        <a
+            target="_blank"
+            [href]="review().reviewerLinkedInProfile"
+            class="text-primary/80 hover:text-primary font-semibold profile-link"
+            >{{ review().reviewerName }}</a
+        >
+        <p class="text-primary">{{ review().reviewerTitle }}</p>
+    </div>
+</section>

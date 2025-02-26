@@ -1,0 +1,10 @@
+<a
+    [hlmTooltipTrigger]="toolTipContent()!"
+    [routerLink]="linkPath()"
+    hlmBtn
+    [aria-describedby]="toolTipContent()!"
+    [class.bg-accent]="active()"
+    class="group w-12 h-12 rounded-full! hover:scale-110 !duration-600 home-button"
+    variant="outline">
+    <ng-icon class="text-md opacity-30 !duration-600 group-hover:opacity-50" [name]="iconName()" />
+</a>

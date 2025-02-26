@@ -1,0 +1,10 @@
+@if (path().length > 2){
+    <span class="flex gap-2">
+        @for (segment of path(); track segment; let index = $index) {
+            <a class="text-primary text-xs" [routerLink]="[segment.path]">{{ segment.label }}</a>
+            @if (index !== 0 && index !== path().length - 1) {
+                <span class="text-xs text-primary">/</span>
+            }
+        }
+    </span>
+}

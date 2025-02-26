@@ -1,0 +1,28 @@
+<div class="border rounded-lg p-4 duration-300 hover:translate-x-1 hover:-rotate-1">
+    <div class="flex align-items-center">
+        @if( project().logo ) {
+        <img
+            class="rounded-sm h-[16px] w-[16px] mt-[2px] mr-[4px]"
+            [src]="project().logo"
+            alt="Logo for {{project().name}}" />
+        }
+        <h3 class="text-sm font-bold text-primary">{{project().name}}</h3>
+    </div>
+    <p class="text-primary text-sm my-4">{{project().description}}</p>
+
+    @if(project().technos){
+    <div class="flex flex-wrap gap-2">
+        @for(techno of project().technos; track techno){
+        <span variant="blue" hlmBadge>{{techno}}</span>
+        }
+    </div>
+    } @if(project().tasks){
+
+    <brn-separator hlmSeparator />
+    <ul>
+        @for(task of project().tasks; track task){
+        <li class="text-primary text-sm my-2">🔹 {{task}}</li>
+        }
+    </ul>
+    }
+</div>

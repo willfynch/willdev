@@ -1,0 +1,14 @@
+<app-company-logo
+    [dates]="content.dates"
+    [company]="content.company"
+    [position]="content.position"
+    [bannerImage]="content.companyBannerImage"
+    [logo]="content.companyLogo"></app-company-logo>
+
+<p class="mt-6 p-4 mb-2 text-primary text-sm">{{content.description}}</p>
+
+<section class="p-4 flex flex-col gap-4">
+    @for(activity of content.activities; track activity){
+        <app-project-details [project]="activity"/>
+    }
+</section>

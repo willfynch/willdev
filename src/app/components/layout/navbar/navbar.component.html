@@ -1,0 +1,13 @@
+<header appFadeIn class="z-[999] w-full bg-transparent flex justify-center items-center gap-2 py-4 sticky top-0">
+    <button class="bg-[#FCFCFD]" variant="outline" size="icon" hlmBtn>🌞</button>
+    <nav class="bg-[#FCFCFD]  flex justify-center gap-2 border-solid border-[1px] w-64 rounded-2xl p-4">
+        @for (navItem of navItems(); track navItem.id) {
+            <app-navbar-button
+                [toolTipContent]="navItem.toolTip"
+                [iconName]="navItem.iconName"
+                [linkPath]="navItem.buttonNavigateTo"></app-navbar-button>
+        }
+        
+    </nav>
+    <button class="bg-[#FCFCFD]" variant="outline" size="icon" hlmBtn>🇬🇧</button>
+</header>

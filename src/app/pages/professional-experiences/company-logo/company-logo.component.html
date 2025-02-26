@@ -1,0 +1,10 @@
+<div appFadeIn [delay]=".5" class="logo-container border-[1px] border-primary/60">
+    <div class="titles w-full">
+        <h2 class="text-lg md:text-xl font-bold text-primary">{{ position() }}</h2>
+        <span class="text-md md:text-lg text-primary">{{ company() }}</span>
+    </div>
+    <span class=" dates text-sm text-primary">{{ dates() }}</span>
+    <div class="backdrop"></div>
+    <img class="logo-image rounded-sm" [src]="logo()" alt="" />
+    <img class="banner-image" [src]="bannerImage()" alt="" />
+</div>
