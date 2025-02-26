@@ -1,14 +1,14 @@
 <app-head-title></app-head-title>
 <app-profile-card [page]="'/about'"></app-profile-card>
-<section class="article-container flex flex-col gap-10 text-sm">
+<section class="article-container flex flex-col gap-10">
     <div class="bio">
-        <h2 class="article-h2">About</h2>
+        <h2 class="article-h2 font-bold text-primary">👨‍💻 About</h2>
         <p class="article-paragraph">{{aboutText1}}</p>
         <p class="article-paragraph">{{aboutText2}}</p>
     </div>
 
     <div class="experience">
-        <h2 class="article-h2">Experience</h2>
+        <h2 class="article-h2 font-bold text-primary">💼 Experience</h2>
         <div class="flex flex-col gap-2">
             @for(experience of experiences; track experience.id){
             <app-experience-item
@@ -22,7 +22,7 @@
     </div>
 
     <div class="side-projects">
-        <h2 class="article-h2">Side projects</h2>
+        <h2 class="article-h2 font-bold text-primary">🎁 Side projects</h2>
         @for(sideProject of sideProjects; track sideProject.name){
         <app-side-project-item
             [sideProjectItem]="sideProject"
@@ -34,7 +34,7 @@
     </div>
 
     <div class="reviews">
-        <h2 class="article-h2">What they say</h2>
+        <h2 class="article-h2 text-primary font-bold ">🗪 What they say</h2>
         <div class="slider-container flex">
             <div class="slider-list slider-list-1">
                 @for(review of reviews; track review.review){

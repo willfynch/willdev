@@ -86,7 +86,7 @@ body {
     @apply text-primary p-4;
 }
 .article-h2 {
-    @apply text-base p-4;
+    @apply p-4 text-lg;
 }
 .article-h3 {
     @apply text-sm font-bold text-primary;
