@@ -1,7 +1,7 @@
-import { Component, computed, input, InputSignal, signal } from "@angular/core"
+import { Component, computed, input, InputSignal } from "@angular/core"
 import { NgIcon } from "@ng-icons/core"
 import { HlmAlertDescriptionDirective, HlmAlertDirective, HlmAlertIconDirective } from "@spartan-ng/ui-alert-helm"
-import { HlmSpinnerComponent } from "../../../../../libs/ui/ui-spinner-helm/src/lib/hlm-spinner.component"
+import { HlmSpinnerComponent } from "../../../../libs/ui/ui-spinner-helm/src/lib/hlm-spinner.component"
 import { TEmailAlertStatus } from "../contact"
 
 @Component({
