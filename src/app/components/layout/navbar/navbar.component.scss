@@ -1,0 +1,33 @@
+.onHome:not(.ham-button) {
+    background-color: transparent;
+    height: 100px;
+    margin-bottom: -100px;
+    transition: all ease-out 0.3s;
+    & > * {
+        color: #fdf7ec;
+    }
+}
+.navbar:not(.onHome),
+.navbar.scrolled {
+    background-color: #fdf7ec;
+    height: 80px;
+    margin-bottom: -80px;
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+    & > * {
+        color: #221505;
+    }
+}
+.ham-button {
+    * {
+        color: #fdf7ec;
+    }
+}
+.navbar:not(.onHome) > .ham-button {
+    color: #221505;
+}
+.ham-button.scrolled,
+.ham-button:not(.onHome) {
+    * {
+        color: #221505;
+    }
+}

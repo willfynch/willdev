@@ -1,27 +1,75 @@
-import { Component } from '@angular/core';
-import { CommonModule } from '@angular/common';
-import { RouterOutlet } from '@angular/router';
-import { Observable, Subscription, catchError, mergeMap, of } from 'rxjs';
-import { NavbarComponent } from './components.dumb/layout/navbar/navbar.component';
-import { FooterComponent } from './components.dumb/layout/footer/footer.component';
-
+import { CommonModule } from "@angular/common"
+import { Component, inject, signal, WritableSignal } from "@angular/core"
+import { NavigationEnd, Router, RouterOutlet } from "@angular/router"
+import { provideIcons } from "@ng-icons/core"
+import {
+    lucideArrowUpRight,
+    lucideBriefcaseBusiness,
+    lucideCopy,
+    lucideDownload,
+    lucideGithub,
+    lucideHouse,
+    lucideLinkedin,
+    lucideMail,
+    lucideMailCheck,
+    lucideMailX,
+    lucideUser,
+} from "@ng-icons/lucide"
+import { NavbarComponent } from "./components/layout/navbar/navbar.component"
+import { NAV_ITEMS } from "./utilities/constants/navitems.const"
+import { Subscription } from "rxjs"
+import { INavbarButton, INavbarItems } from "./components/layout/navbar/navbar"
+import { TPath } from "./utilities/common-types/paths"
+import { FooterComponent } from "./components/layout/footer/footer.component"
 
 @Component({
-  selector: 'app-root',
-  standalone: true,
-  imports: [CommonModule, RouterOutlet, NavbarComponent, FooterComponent],
-  templateUrl: './app.component.html',
-  styleUrl: './app.component.scss'
+    selector: "app-root",
+    imports: [CommonModule, RouterOutlet, NavbarComponent, FooterComponent],
+    standalone: true,
+    providers: [
+        provideIcons({
+            lucideUser,
+            lucideBriefcaseBusiness,
+            lucideMail,
+            lucideHouse,
+            lucideArrowUpRight,
+            lucideDownload,
+            lucideLinkedin,
+            lucideGithub,
+            lucideCopy,
+            lucideMailX,
+            lucideMailCheck
+        }),
+    ],
+    templateUrl: "./app.component.html",
+    styleUrl: "./app.component.scss",
 })
 export class AppComponent {
-  title = 'willdev';
+    protected navItems: WritableSignal<INavbarItems> = signal<INavbarItems>(NAV_ITEMS)
 
-  
-  ngOnInit(){
-    
-  }
+    private router = inject(Router)
 
+    changeActiveButtonOnNavigationEnd: Subscription = this.router.events.subscribe({
+        next: (event) => {
+            if (event instanceof NavigationEnd) {
+                this.activateButtonCorrespondingToCurrentRoute(event.url as TPath)
+            }
+        },
+    })
 
+    ngOnDestroy() {
+        this.changeActiveButtonOnNavigationEnd.unsubscribe()
+    }
+
+    activateButtonCorrespondingToCurrentRoute(path: TPath) {
+        const updatedNavItems = this.navItems().map((navbarItem: INavbarButton) => {
+            if (path === navbarItem.linkPath) {
+                navbarItem.active = true
+            } else {
+                navbarItem.active = false
+            }
+            return navbarItem
+        })
+        this.navItems.set(updatedNavItems)
+    }
 }
-
-

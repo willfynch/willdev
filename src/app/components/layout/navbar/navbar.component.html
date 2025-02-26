@@ -1,0 +1,7 @@
+<header class= "z-50 w-full bg-[#FCFCFD] flex justify-center py-4 sticky top-0">
+    <nav class="flex justify-center gap-2 border-solid border-[1px] w-64 rounded-2xl p-4">
+        @for(navItem of navItems(); track navItem.id){
+            <app-navbar-button [active]="navItem.active" [toolTipContent]="navItem.toolTip" [iconName]="navItem.iconName" [linkPath]="navItem.buttonNavigateTo" ></app-navbar-button>
+        }
+    </nav>
+</header>

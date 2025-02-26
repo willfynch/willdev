@@ -1,0 +1,16 @@
+<div class="flex justify-between">
+    <div>
+        <button hlmBtn variant="outline" (click)="copyEmailService.copyEmail()">
+            <ng-icon class="mr-2 opacity-50" name="lucideCopy"/>
+            <span class="opacity-50">{{copyEmailService.copyEmailText()}}</span>
+        </button>
+    </div>
+    <div class="flex gap-2">
+        @for(social of socialLinks(); track social.name){
+            <a target="_blank" [href]="social.link" role="button" hlmBtn size="icon" variant="outline">
+                <ng-icon hlm size='sm' class="opacity-50" [name]="social.icon" />
+            </a>
+        }
+    </div>
+
+</div>

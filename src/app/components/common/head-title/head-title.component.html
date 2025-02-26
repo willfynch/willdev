@@ -1,0 +1,15 @@
+<div class="w-full flex justify-center mt-6 mb-12">
+    <div class="h-[54px] w-80 overflow-hidden">
+        @if(!isHelloArrayUsed()){
+            <h1 class="h-[54px] duration-700 text-5xl text-center font-semibold text-black/20">{{title()}}</h1>
+        }
+        
+        @if(isHelloArrayUsed()){
+            <div class="hello-container">
+                @for(hello of hellos; track hello){
+                    <h1 [ngStyle]="translatedStyle()" class="h-[54px] duration-700 text-5xl text-center font-semibold text-black/20">{{hello}}</h1>
+                }
+            </div>
+        }
+    </div>
+</div>
